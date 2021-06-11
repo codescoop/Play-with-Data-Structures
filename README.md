@@ -10,7 +10,7 @@ Welcome to the exercises. This is where the magic happens!
 <blockquote>
   <details>
   <summary>
-    Challenges- Fundamentals
+    Excercise-01 : Fundamentals &nbsp; [16 Questions]
   </summary>
     <br>
     <table>
@@ -41,7 +41,7 @@ Welcome to the exercises. This is where the magic happens!
 <blockquote>
   <details>
   <summary>
-    Challenges- Patterns
+    Excercise-02 : Patterns &nbsp; [14 Questions]
   </summary>
     <br>
      <table>
