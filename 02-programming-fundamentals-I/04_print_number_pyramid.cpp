@@ -11,35 +11,33 @@
 using namespace std;
 
 int main(){
-    int total_rows, row=1, step, value;
+    int total_rows, row=1, col, value=0;
 
     cout<<"Enter total number of rows: ";
     cin>>total_rows;
 
     while(row <= total_rows){
       //Print Spaces
-      step = row;
-      while(total_rows-step > 0){
+      col = total_rows-row;
+      while(col > 0){
           cout<<" ";
-          step++;
+          col--;
       }
 
       //Print Increasing Values
-      step = row;
-      value = row;
-      while(step>0){
-        cout<<value;
+      col = row;
+      while(col>0){
         value++;
-        step--;
+        cout<<value;
+        col--;
       }
       
       //Print Descreasing Values
-      step = row;
-      value = value-2;
-      while(step>1){
-        cout<<value;
+      col = row-1;
+      while(col>0){
         value--;
-        step--;
+        cout<<value;
+        col--;
       }
       
       cout<<endl;
