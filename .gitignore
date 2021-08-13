@@ -30,3 +30,9 @@
 *.exe
 *.out
 *.app
+
+# custom files
+template.txt
+
+#ide
+.vscode
