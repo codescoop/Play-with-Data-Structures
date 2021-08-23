@@ -14,12 +14,15 @@ Welcome to the exercises. This is where the magic happens!
   </summary>
     <br>
     <table>
-      <tr><td>S.No</td><td>Excercise</td></tr>
+      <tr>
+        <td>S.No</td>
+        <td>Exercise <img width=600/> </td>
+      </tr>
       <tr>
         <td>1</td>
         <td>
           <a href="exercise-01-fundamentals/01_von_neuman_loves_binary.cpp">
-            Given a binary number ,help Von Neuman to find out its decimal representation.
+            Von Neuman Loves Binary
           </a>
         </td>
       </tr>
@@ -27,7 +30,7 @@ Welcome to the exercises. This is where the magic happens!
         <td>2</td>
         <td>
           <a href="exercise-01-fundamentals/02_pythagoras_triplets.cpp"> 
-            Given a number N (denoting one of the legs of the triangle), Print its Pythagoras pair in increasing order if they exist. Otherwise, print "-1".
+            Pythagoras Triplets
           </a>
         </td>
       </tr>
@@ -35,15 +38,111 @@ Welcome to the exercises. This is where the magic happens!
         <td>3</td>
         <td>
           <a href="exercise-01-fundamentals/03_fahrenheit_to_celsius.cpp"> 
-            Print as output the Celsius conversions. Use the formula C = (5/9)(F – 32)
+            Fahrenheit to Celsius conversions
           </a>
         </td>
       </tr>
       <tr>
         <td>4</td>
         <td>
-          <a href="exercise-01-fundamentals/"> 
-            Print
+          <a href="exercise-01-fundamentals/04_simple_input.cpp"> 
+            Simple Input
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>
+          <a href="exercise-01-fundamentals/05_print_series.cpp"> 
+            Print Series
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>
+          <a href="exercise-01-fundamentals/06_traffic_odd_even.cpp"> 
+            Traffic Odd Even
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>
+          <a href="exercise-01-fundamentals/07_transport_fare.cpp"> 
+            Transport Fare Problem
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>
+          <a href="exercise-01-fundamentals/08_counts_digits.cpp"> 
+            Count Digits
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td>
+          <a href="exercise-01-fundamentals/09_basic_calculator.cpp"> 
+            Basic Calculator
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td>
+          <a href="exercise-01-fundamentals/10_increase_decrease_sequence.cpp"> 
+            Increase Decrease Sequence
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>11</td>
+        <td>
+          <a href="exercise-01-fundamentals/11_decimal_tooctal.cpp"> 
+            Decimal to Octal
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>12</td>
+        <td>
+          <a href="exercise-01-fundamentals/12_quadratic_equation.cpp"> 
+            Quadratic Equation
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>13</td>
+        <td>
+          <a href="exercise-01-fundamentals/13_is_armstrong_number.cpp"> 
+            Armstrong Number
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>14</td>
+        <td>
+          <a href="exercise-01-fundamentals/14_check_prime.cpp"> 
+            Check Prime
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>15</td>
+        <td>
+          <a href="exercise-01-fundamentals/15_binary_to_decimal.cpp"> 
+            Binary to Decimal
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>16</td>
+        <td>
+          <a href="exercise-01-fundamentals/16_print_reverse.cpp"> 
+            Print Reverse
           </a>
         </td>
       </tr>
@@ -59,7 +158,10 @@ Welcome to the exercises. This is where the magic happens!
   </summary>
     <br>
      <table>
-      <tr><td>S.No</td><td>Excercise</td></tr>
+      <tr>
+        <td>S.No</td>
+        <td>Excercise <img width=600/> </td>
+       </tr>
       <tr>
         <td>1</td>
         <td>
