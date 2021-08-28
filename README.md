@@ -221,8 +221,56 @@ Welcome to the exercises. This is where the magic happens!
        <tr>
         <td>8</td>
         <td>
-          <a href="">
-            Pattern
+          <a href="exercise-02-patterns/08_pattern%20_inverted_HourGlass.cpp">
+            Pattern Inverted HourGlass
+          </a>
+        </td>
+      </tr>
+       <tr>
+        <td>9</td>
+        <td>
+          <a href="exercise-02-patterns/09_swastika_pattern.cpp">
+            卐 Swastika Pattern
+          </a>
+        </td>
+      </tr>
+       <tr>
+        <td>10</td>
+        <td>
+          <a href="exercise-02-patterns/10_hollow_diamond_pattern.cpp">
+            Hollow Diamond Pattern
+          </a>
+        </td>
+      </tr>
+       <tr>
+        <td>11</td>
+        <td>
+          <a href="exercise-02-patterns/11_hollow_rhombus_pattern.cpp">
+            Hollow Rhombus Pattern
+          </a>
+        </td>
+      </tr>
+       <tr>
+        <td>12</td>
+        <td>
+          <a href="exercise-02-patterns/12_pascal_triangle_1.cpp">
+            Pascal Triangle
+          </a>
+        </td>
+      </tr>
+       <tr>
+        <td>13</td>
+        <td>
+          <a href="exercise-02-patterns/13_pattern_and_star_1.cpp">
+            Pattern Numbers & Stars - 1
+          </a>
+        </td>
+      </tr>
+       <tr>
+        <td>14</td>
+        <td>
+          <a href="exercise-02-patterns/14_pattern_and_star_2.cpp">
+            Pattern Numbers & Stars - 2
           </a>
         </td>
       </tr>
