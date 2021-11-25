@@ -280,7 +280,7 @@ Welcome to the exercises. This is where the magic happens!
 
 
 ### [4. Functions](04-functions)
-### [5. Arrays]()
+### [5. Arrays](05_arrays)
 
 <!-- Challenges --------------------  -->
 <blockquote>
