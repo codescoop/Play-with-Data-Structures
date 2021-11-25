@@ -1,6 +1,5 @@
 /*
     Problem - Given a number N (denoting one of the legs of the triangle), Print its Pythagoras pair in increasing order if they exist. Otherwise, print "-1".
-              For eg 000111 in binary is 7 in decimal.
     
     Input Format - A single integer N
 

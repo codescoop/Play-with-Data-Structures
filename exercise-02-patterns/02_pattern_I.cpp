@@ -52,7 +52,7 @@ int main() {
 			cout << "1" ;
 		}
 		cout << endl;
-		row++;
+		row++;  
 	}
 	return 0;
 }

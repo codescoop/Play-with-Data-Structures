@@ -43,6 +43,9 @@ int main() {
 
     Algo:   Put a loop till the END OF INPUT.
             Add the new number to the previous sum.
+
+
+            
             If the sum is positive print the current number.
             Otherwise, break the loop.
 */

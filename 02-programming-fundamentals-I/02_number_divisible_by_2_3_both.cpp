@@ -18,7 +18,7 @@ int main(){
         cout<<"Number divisible by both 2 & 3"<<endl;
     }else if(num%2 == 0){
         cout<<"Number divisible by 2"<<endl;
-    }else{
+    }else if(num%3 == 0){
         cout<<"Number divisible by 3"<<endl;
     }
 

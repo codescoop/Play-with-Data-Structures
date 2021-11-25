@@ -10,7 +10,10 @@
 
     Constraints:   -100 <= a, b, c <= 100
 
-    Output Format: Output contains one/two lines. First line contains nature of the roots .The next line contains roots(in non-decreasing order) separated by a space if they exist. If roots are imaginary do not print the roots. Output the integer values for the roots.
+    Output Format: Output contains one/two lines. 
+                   First line contains nature of the roots .
+                   The next line contains roots(in non-decreasing order) separated by a space if they exist. 
+                   If roots are imaginary do not print the roots. Output the integer values for the roots.
 
     Sample Input:   1 -11 28
     

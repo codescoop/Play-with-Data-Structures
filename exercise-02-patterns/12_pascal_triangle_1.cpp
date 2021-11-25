@@ -30,12 +30,12 @@ int main() {
 	for(int row=1; row<=total_rows; row++){
 		int cos;                      // counter of star
 		int cop;                      // counter of pattern
-		int num = 1;
 		// print spaces
 		for(cos=1; cos<=nos; cos++){
 			cout << " ";
 		}
 		// print pattern - pascal number 
+		int num = 1;
 		for(cop=1; cop<=nop; cop++){
 			if(cop==1 || cop==row){
 				cout << 1 << " ";
