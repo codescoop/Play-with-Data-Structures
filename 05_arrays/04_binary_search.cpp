@@ -16,7 +16,7 @@ int binary_search(int arr[], int range, int key)
         int mid = (start + end) / 2;  // calculating the middle value
 
         if (arr[mid] == key)
-{
+        {
             return mid;
         }
         else if (arr[mid] > key)

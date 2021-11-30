@@ -8,6 +8,11 @@ using namespace std;
 int main()
 {   
     // create array
+    int arr[] = {9, 55};               // array declaration & initilizations
+    cout << "Elements in array: " << sizeof(arr)/sizeof(int) << endl;
+
+
+    // create array
     int arr1[10];                       // array declaration
     int arr2[10] = {5};                 // array declaration & initilizations
 

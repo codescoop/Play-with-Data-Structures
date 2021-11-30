@@ -7,7 +7,11 @@
 #include <iostream>
 using namespace std;
 
-void bubble_sort(int arr[], int range)
+bool compare(int val1, int val2){            // comparator function
+    return val1 > val2;
+}
+
+void bubble_sort(int arr[], int range, bool (&cmp) (int val1, int val2))
 {   
     // iteration count
     for (int itr = 1; itr < range; itr++)
@@ -16,7 +20,7 @@ void bubble_sort(int arr[], int range)
         for (int index = 0; index < range - itr; index++)
         {   
             // parewise swapping
-            if (arr[index] > arr[index + 1])   
+            if (cmp(arr[index], arr[index + 1]))     // using compare function
             {
                 swap(arr[index], arr[index + 1]);
             }
@@ -40,7 +44,7 @@ int main()
     }
 
     // Sorting array
-    bubble_sort(arr, range);
+    bubble_sort(arr, range, compare);       // Function as Parameter
 
     // print the sorted array
     cout << "Sorted Array: ";

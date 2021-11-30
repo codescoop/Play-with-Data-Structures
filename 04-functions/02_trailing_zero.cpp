@@ -1,7 +1,7 @@
 /* 
     Trailing Zero Function
 
-    Given a interger n, write a function thatreturn count of trailing zeros in n!
+    Given a interger n, write a function that return count of trailing zeros in n!
 
     Constraint:     1 <= N <= 10^9
 

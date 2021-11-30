@@ -13,7 +13,8 @@ int main(){
 
     char ch;
     cout<<"Enter you characters :";
-    cin>>ch;
+    ch = cin.get();         // Note: If you want to read spaces then use cin.get() 
+    // cin>>ch;
 
     while(ch!='$'){
         if(ch>='0' and ch<='9'){
@@ -28,7 +29,8 @@ int main(){
         else{
             other++;
         }
-        cin>>ch;
+        ch = cin.get();         // Note: If you want to read spaces then use cin.get() 
+        // cin>>ch;
     }
     
 cout<<"Digits :"<<digits<<endl;
