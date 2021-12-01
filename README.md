@@ -281,6 +281,7 @@ Welcome to the exercises. This is where the magic happens!
 
 ### [4. Functions](04-functions)
 ### [5. Arrays](05_arrays)
+### [6. 2D Arrays](06_2D_arrays)
 
 <!-- Challenges --------------------  -->
 <blockquote>
