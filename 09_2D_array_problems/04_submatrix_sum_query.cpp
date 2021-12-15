@@ -47,7 +47,7 @@ using namespace std;
             psa[row][col] = psa[row-1][col] + psa[row][col-1] - psa[row-1][col-1] +arr[row][col];
         }
     }
-    // Dispaly values of psa array
+    // Display values of psa array
     cout << "Prefix Sum Matrix: \n";
     for(int row=0; row<=rows-1; row++){
         for(int col=0; col<=cols-1; col++){

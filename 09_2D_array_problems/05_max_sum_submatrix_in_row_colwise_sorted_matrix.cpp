@@ -27,6 +27,7 @@ void printArray(int **arr, int rows, int cols){
     }
 }
 
+// creating suffix sum matrix & find the max element
 int maxSumSubmatrix(int **arr, int rows, int cols){
     // Col wise addition First
     for(int row=rows-1; row>=0; row--){
