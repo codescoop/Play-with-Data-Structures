@@ -2,7 +2,7 @@
     Sum of All Submatrix from a given Matrix (Approach-2)
     - Prefix Sum Matrix Approach
       Time Complexity - O(n^4)
-      Time Complexity - O(n^2)
+      Space Complexity - O(n^2)
 
     Sample Input: 2 2
                   1 1

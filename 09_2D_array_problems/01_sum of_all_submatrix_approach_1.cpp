@@ -2,7 +2,7 @@
     Sum of All Submatrix from a given Matrix (Approach-1)
     - Brute Force Approach
       Time Complexity - O(n^6)
-      Time Complexity - O(1)
+      Space Complexity - O(1)
     
     Sample Input: 3 3
                   1 1 1
