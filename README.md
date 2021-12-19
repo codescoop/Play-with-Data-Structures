@@ -341,7 +341,7 @@ Welcome to the exercises. This is where the magic happens!
         <tr>
         <td>6</td>
         <td>
-          <a href="exercise-03-arrays/">
+          <a href="exercise-03-arrays/06_maximum_subarray_sum.cpp">
             Maximum Subarray Sum
           </a>
         </td>
@@ -349,7 +349,7 @@ Welcome to the exercises. This is where the magic happens!
         <tr>
         <td>7</td>
         <td>
-          <a href="exercise-03-arrays/">
+          <a href="exercise-03-arrays/07_maximum_circular_sum.cpp">
             Maximum Circular Sum
           </a>
         </td>
@@ -357,7 +357,7 @@ Welcome to the exercises. This is where the magic happens!
         <tr>
         <td>8</td>
         <td>
-          <a href="exercise-03-arrays/">
+          <a href="exercise-03-arrays/08_maximum_length_bitonic_subarray.cpp">
             Maximum length Bitonic Subarray
           </a>
         </td>
@@ -365,7 +365,7 @@ Welcome to the exercises. This is where the magic happens!
         <tr>
         <td>9</td>
         <td>
-          <a href="exercise-03-arrays/">
+          <a href="exercise-03-arrays/09_array_spiral_print_anticlockwise.cpp">
             Array Spiral Print Anticlockwise
           </a>
         </td>
@@ -373,7 +373,7 @@ Welcome to the exercises. This is where the magic happens!
         <tr>
         <td>10</td>
         <td>
-          <a href="exercise-03-arrays/">
+          <a href="exercise-03-arrays/10_rotate_image_90_degree.cpp">
             Rotate Image(N x N Array)
           </a>
         </td>
@@ -381,24 +381,40 @@ Welcome to the exercises. This is where the magic happens!
         <tr>
         <td>11</td>
         <td>
-          <a href="exercise-03-arrays/">
+          <a href="exercise-03-arrays/11_chewbacca_and_number.cpp">
             Chewbacca and Number
           </a>
         </td>
       </tr>
-        <tr>
+       <tr>
         <td>12</td>
         <td>
-          <a href="exercise-03-arrays/">
+          <a href="exercise-03-arrays/12_broken_calculator.cpp">
             Broken Calculator 
           </a>
         </td>
       </tr>
-        <tr>
+       <tr>
         <td>13</td>
         <td>
-          <a href="exercise-03-arrays/">
-            Challange01
+          <a href="exercise-03-arrays/13_matrix_search.cpp">
+            Matrix Search
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>14</td>
+        <td>
+          <a href="exercise-03-arrays/14_sum_of_two_arrays.cpp">
+            Sum of Two Arrays
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>15</td>
+        <td>
+          <a href="exercise-03-arrays/15_median_of_sorted_array.cpp">
+            Median of Sorted Arrays
           </a>
         </td>
       </tr>
@@ -422,7 +438,7 @@ Welcome to the exercises. This is where the magic happens!
       <tr>
         <td>1</td>
         <td>
-          <a href="">
+          <a href="misc/">
             Challange01
           </a>
         </td>
