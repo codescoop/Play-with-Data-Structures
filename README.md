@@ -282,6 +282,130 @@ Welcome to the exercises. This is where the magic happens!
 ### [4. Functions](04-functions)
 ### [5. Arrays](05_arrays)
 ### [6. 2D Arrays](06_2D_arrays)
+### [7. Character Arrays](07_character_arrays)
+### [8. Strings](08_strings)
+### [9. 2D Array Problems](09_2D_array_problems)
+
+<!-- Challenges - Arrays--------------------  -->
+<blockquote>
+  <details>
+  <summary>
+    Excercise-03 : Arrays &nbsp; [15 Questions]
+  </summary>
+    <br>
+     <table>
+      <tr>
+        <td>S.No</td>
+        <td>Excercise <img width=600/> </td>
+       </tr>
+      <tr>
+        <td>1</td>
+        <td>
+          <a href="exercise-03-arrays/01_max_value_in_array.cpp">
+            Maximum Value in Array
+          </a>
+        </td>
+      </tr>
+        <tr>
+        <td>2</td>
+        <td>
+          <a href="exercise-03-arrays/02_wave_print_column_wise.cpp">
+            Wave print column wise
+          </a>
+        </td>
+      </tr>
+        <tr>
+        <td>3</td>
+        <td>
+          <a href="exercise-03-arrays/03_target_sum_pairs.cpp">
+            Target Sum Pairs
+          </a>
+        </td>
+      </tr>
+        <tr>
+        <td>4</td>
+        <td>
+          <a href="exercise-03-arrays/04_target_sum_triplets.cpp">
+            Target Sum Triplets
+          </a>
+        </td>
+      </tr>
+        <tr>
+        <td>5</td>
+        <td>
+          <a href="exercise-03-arrays/05_rain_water_harvesting.cpp">
+            Rain Water Harvesting
+          </a>
+        </td>
+      </tr>
+        <tr>
+        <td>6</td>
+        <td>
+          <a href="exercise-03-arrays/">
+            Maximum Subarray Sum
+          </a>
+        </td>
+      </tr>
+        <tr>
+        <td>7</td>
+        <td>
+          <a href="exercise-03-arrays/">
+            Maximum Circular Sum
+          </a>
+        </td>
+      </tr>
+        <tr>
+        <td>8</td>
+        <td>
+          <a href="exercise-03-arrays/">
+            Maximum length Bitonic Subarray
+          </a>
+        </td>
+      </tr>
+        <tr>
+        <td>9</td>
+        <td>
+          <a href="exercise-03-arrays/">
+            Array Spiral Print Anticlockwise
+          </a>
+        </td>
+      </tr>
+        <tr>
+        <td>10</td>
+        <td>
+          <a href="exercise-03-arrays/">
+            Rotate Image(N x N Array)
+          </a>
+        </td>
+      </tr>
+        <tr>
+        <td>11</td>
+        <td>
+          <a href="exercise-03-arrays/">
+            Chewbacca and Number
+          </a>
+        </td>
+      </tr>
+        <tr>
+        <td>12</td>
+        <td>
+          <a href="exercise-03-arrays/">
+            Broken Calculator 
+          </a>
+        </td>
+      </tr>
+        <tr>
+        <td>13</td>
+        <td>
+          <a href="exercise-03-arrays/">
+            Challange01
+          </a>
+        </td>
+      </tr>
+    </table>
+  </details>
+ </blockquote>
+
 
 <!-- Challenges --------------------  -->
 <blockquote>
