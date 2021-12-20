@@ -62,12 +62,13 @@ int getMedian1(int arr1[], int arr2[], int len){
     return (mergeArr[len-1]+mergeArr[len])/2;
 }
 
+// Two pointer Approach: Counting while merging
 int getMedian2(int arr1[], int arr2[], int len){
     int i=0, j=0;
-    int count=0;
-    int middle1=0, middle2=0;
+    int middle1=0, middle2=0;   // keep the track of middle element values
+    int count=0;                // count the element in merged array
 
-    while(count<=len){
+    while(count<=len){           // Remember this is NOT [count <= len-1]
         if(arr1[i] <= arr2[j]){
             middle1 = middle2;
             middle2 = arr1[i];
@@ -80,17 +81,47 @@ int getMedian2(int arr1[], int arr2[], int len){
         if(i == len){
             middle1 = middle2;
             middle2 = arr2[0];
-            j++;
+            break;
         }
         if(j == len){
             middle1 = middle2;
             middle2 = arr1[0];
-            j++;
+            break;
         }
         count++;
     }
 
     return (middle1 + middle2)/2;
+}
+
+// calculate median
+int getMedian(int arr[], int len){
+    if(len%2 == 0){
+        return (arr[len/2-1]+arr[len/2])/2;
+    }else{
+        return arr[len/2];
+    }
+}
+
+// Efficient Approach: Divide and Conquer idea similar to binary search
+int getMedian3(int arr1[], int arr2[], int len){
+    int m1, m2;
+    if(len == 0){
+        return 0;
+    }
+    if(len == 1){
+        return (arr1[0]+arr2[0])/2;
+    }
+    m2 = getMedian(arr2, len);
+    m1 = getMedian(arr1, len);
+    if(m1 = m2){
+        return m1;
+    }
+    if (m1<m2){
+        return getMedian3(arr1+len/2, arr2, len-len/2);
+    }else{
+        return getMedian3(arr1,arr2+len/2, len-len/2);
+    }
 }
 
 int main() {
@@ -103,8 +134,9 @@ int main() {
     fillArray(arr2, len);
 
     cout << "Median: ";
-    // cout << getMedian1(arr1, arr2, len);
-    cout << getMedian2(arr1, arr2, len);
+    // cout << getMedian1(arr1, arr2, len);          // Brute force
+    // cout << getMedian2(arr1, arr2, len);          // Two pointer
+    cout << getMedian3(arr1, arr2, len);    // Divide and Conquer
         
     cout << endl;
 	return 0;
@@ -170,13 +202,14 @@ int median(int *arr1,int *arr2,int n)
 
         if(median1 == median2)
             return median1;
+
         if(m1 > m2){
             hi1 = m1;
             lo2 = m2;
         }
         else{
-                hi2 = m2;
-                lo1 = m1;
+            hi2 = m2;
+            lo1 = m1;
 
         }
     }
