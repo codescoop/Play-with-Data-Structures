@@ -114,13 +114,13 @@ int getMedian3(int arr1[], int arr2[], int len){
     }
     m2 = getMedian(arr2, len);
     m1 = getMedian(arr1, len);
-    if(m1 = m2){
+    if(m1 == m2){
         return m1;
     }
     if (m1<m2){
-        return getMedian3(arr1+len/2, arr2, len-len/2);
+        return getMedian3(arr1+len/2, arr2, len-len/2);     // recurcive call
     }else{
-        return getMedian3(arr1,arr2+len/2, len-len/2);
+        return getMedian3(arr1,arr2+len/2, len-len/2);      // recurcive call
     }
 }
 
