@@ -422,12 +422,118 @@ Welcome to the exercises. This is where the magic happens!
   </details>
  </blockquote>
 
-
-<!-- Challenges --------------------  -->
+<!-- Challenges - Strings --------------------  -->
 <blockquote>
   <details>
   <summary>
-    Excercise-10 : Misc. &nbsp; [10 Questions]
+    Excercise-04 : Strings &nbsp; [11 Questions]
+  </summary>
+    <br>
+     <table>
+      <tr>
+        <td>S.No</td>
+        <td>Excercise <img width=600/> </td>
+       </tr>
+      <tr>
+        <td>1</td>
+        <td>
+          <a href="exercise-04-strings/01_difference_in_ascii_codes.cpp">
+            Difference in Ascii Codes
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>
+          <a href="exercise-04-strings/02_ultra_fast_mathematicians.cpp">
+            Ultra Fast Mathematicians
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>
+          <a href="exercise-04-strings/03_max_frequency_character.cpp">
+            Max Frequency Character
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>
+          <a href="exercise-04-strings/04_string_compression.cpp">
+            String Compression
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>
+          <a href="exercise-04-strings/05_is_palindrome.cpp">
+            Is Palindrome? (Recursive)
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>
+          <a href="exercise-04-strings/06_max_length_substring_after_k_changes.cpp">
+            Maximum length substring having all same characters after k changes
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>
+          <a href="exercise-04-strings/07_find_words_from_camelcase_string.cpp">
+            Find all words in CamelCase string
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>
+          <a href="exercise-04-strings/08_character_type.cpp">
+            Character Type
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td>
+          <a href="exercise-04-strings/09_lower_upper.cpp">
+            Lower Upper
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td>
+          <a href="exercise-04-strings/10_person_and_magical_park.cpp">
+            Person and Magical Park
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>11</td>
+        <td>
+          <a href="exercise-04-strings/11_find_csd_number.cpp">
+            Find CSD Number
+          </a>
+        </td>
+      </tr>
+    </table>
+  </details>
+ </blockquote>
+ 
+### [10. Pointers](10-pointers)
+
+### [^^ Miscellaneous](misc)
+<!-- Challenges - Misc --------------------  -->
+<blockquote>
+  <details>
+  <summary>
+    Excercise-10 : Misc. &nbsp; [5 Questions]
   </summary>
     <br>
      <table>
