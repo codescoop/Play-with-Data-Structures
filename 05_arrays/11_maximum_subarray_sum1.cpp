@@ -11,24 +11,23 @@ void subarrays(int arr[], int range){
     int left = -1;             // for storing maximum subarray left index
     int right = -1;            // for storing maximum  subarray right index
 
-    for(int i=0; i<range; i++){
-        for(int j=i; j<range; j++){
+    for(int start=0; start<range; start++){
+        for(int end=start; end<range; end++){
             
-            // Element of subarrays(i,j)
+            // Element of subarrays(start,end)
             int currentSum = 0;
 
-            for(int k=i; k<=j; k++){
+            for(int k=start; k<=end; k++){
                 currentSum += arr[k];
             }
             // Updating maximum sum if currentSum  > maximumSum
             if(currentSum > maxSum){
                 maxSum = currentSum;
-                left = i;
-                right = j;
+                left = start;
+                right = end;
             }
         }
     }
-
     // print the maximum sum
     cout << "Maximun Sum: " << maxSum << endl;
     
@@ -55,3 +54,13 @@ int main(){
 
     return 0;
 }
+
+
+/* 
+OUTPUT:
+    Enter total elements: 9
+    Enter values: -4 1 3 -2 6 2 -1 -4 -7
+
+    Maximun Sum: 10
+    Subarray having Maximum Sum: 1,3,-2,6,2,
+*/

@@ -1,11 +1,24 @@
 /* 
     Insertion Sort
     Insert the "current" element in right position
+
+    The array is virtually split into a sorted and an unsorted part. 
+    Values from the unsorted part are picked and placed at the correct position in the sorted part.
 */
 
 #include<iostream>
 using namespace std;
 
+// function to print array
+void print_array(int arr[], int range){
+    for (int index = 0; index < range; index++)
+    {
+        cout << arr[index] << " ";
+    }
+    cout << endl;
+}
+
+// insertion sort
 void insertion_sort(int arr[], int range)
 {   
     // iteration for sorted array
@@ -19,9 +32,14 @@ void insertion_sort(int arr[], int range)
             index--;
         }
         arr[index+1] = curr;
+
+        // print array 
+        cout << "Step " << itr << " : ";
+        print_array(arr, range);
     }
 }
 
+// funtion to drive code
 int main()
 {
     int range;
@@ -42,11 +60,21 @@ int main()
 
     // print the sorted array
     cout << "Sorted Array: ";
-    for (int index = 0; index < range; index++)
-    {
-        cout << arr[index] << " ";
-    }
-    cout << endl;
+    print_array(arr, range);
 
     return 0;
 }
+
+/*
+OUTPUT:
+
+    How many elements you want to enter inside array: 5
+    Enter the array elements for sorting: 5 2 3 4 1
+
+    Step 1 : 2 5 3 4 1 
+    Step 2 : 2 3 5 4 1 
+    Step 3 : 2 3 4 5 1 
+    Step 4 : 1 2 3 4 5 
+    
+    Sorted Array: 1 2 3 4 5 
+*/

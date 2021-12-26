@@ -1,6 +1,10 @@
 /*  
     Largest/maxmimum subarrays sum III 
     (Kadane's Algorithm) - 1 loop
+
+    Eg: Array        : -4  1  3 -2  6  2 -1 -4 -7
+        Current Sum  :  0  1  4  2  8 10  9  5  0
+        Max Sum      :  0  1  4  4  8 10 10 10 10
  */
 
 #include <iostream>
@@ -38,3 +42,10 @@ int main(){
 
     return 0;
 }
+
+/* 
+OUTPUT:
+    Enter total elements: 9
+    Enter values: -4 1 3 -2 6 2 -1 -4 -7
+    Maximun Sum: 10
+*/

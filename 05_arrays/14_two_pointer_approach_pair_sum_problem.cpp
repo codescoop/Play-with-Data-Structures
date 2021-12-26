@@ -13,7 +13,7 @@ int main(){
     int k=16;
 
     int i = 0;                                  // "i" is pointing at array beginning
-    int j = (sizeof(arr)/sizeof(int))-1;       // "j" is pointing at last
+    int j = (sizeof(arr)/sizeof(int))-1;        // "j" is pointing at last
     
     while(i<j){
         int currentSum = arr[i]+arr[j];
@@ -30,3 +30,10 @@ int main(){
 
     return 0;
 }
+
+/* 
+
+OUTPUT: 3 and 13
+        4 and 12
+        5 and 11
+*/
