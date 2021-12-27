@@ -526,7 +526,7 @@ Welcome to the exercises. This is where the magic happens!
   </details>
  </blockquote>
  
-### [10. Pointers](10-pointers)
+### [10. Pointers](10_pointers)
 
 ### [^^ Miscellaneous](misc)
 <!-- Challenges - Misc --------------------  -->
