@@ -30,6 +30,13 @@ int main(){
       cout << endl;
     }
 
+    // Free each sub-array
+    for(int row=0; row<=rows-1; row++){
+      delete[] arr[row];
+    }
+    //Free the array pointers
+    delete[] arr;
+
     return 0;
 }
 
