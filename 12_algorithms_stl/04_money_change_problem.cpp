@@ -35,9 +35,10 @@ int main()
     while(amount){
         int idx = lower_bound(currency, currency+size, amount, compare) - currency -1;
         /* If search value is not present in array. Then lower bound will return 
-           address of value, greater than the search value. So reducing one index &
-           using compare funtion to overwrite index (i.e increase one value) for 
-           the search values present in array */
+           address of value, greater than the search value. So, we are reducing one index.
+           Now, this will also increase one index for the case when the search values 
+           is present in the array. So, we are using compare funtion to overwrite index.
+        */
         int money = currency[idx];
         cout << money << " ";
         amount = amount - money;

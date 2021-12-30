@@ -59,8 +59,9 @@ int main()
     cout << "Vector: ";
     print_vector(v);
 
-    rotate(v.begin(), v.begin()+mid, v.end());    // rotate
-    rotate(v.begin(), v.begin()+mid, v.end());
+    rotate(v.begin(), v.begin()+mid, v.end());     // rotate
+    rotate(v.begin(), v.begin()+mid, v.end());     // rotate again
+    rotate(v.begin(), v.begin()+mid, v.end());     // rotate again
     
     cout << "After Rotate: ";
     print_vector(v);
@@ -102,6 +103,21 @@ int main()
     cout << "After next permutation: ";
     print_vector(v1);
 
+
+    // Printing all permutaion values
+    vector<int> v2{1,2,3};
+
+    cout << "\nAll permutation value of Vector v2: ";
+    print_vector(v2);
+
+    cout << "v2: ";       // first value
+    print_vector(v2);
+
+    while(next_permutation(v2.begin(), v2.end())){
+        cout << "v2: ";
+        print_vector(v2);
+    }
+
     return 0;
 }
 
@@ -112,11 +128,19 @@ OUTPUT:
     After Rotate: 30 40 50 10 20 
 
     Vector: 1 2 3 4 
-    After Rotate: 1 2 3 4 
+    After Rotate: 3 4 1 2 
 
     Array: 10 20 30 40 
     After next permutation: 10 20 40 30 
 
     Vector: 1 2 3 
-    After next permutation: 1 3 2 
+    After next permutation: 1 3 2
+
+    All permutation value of Vector v2: 1 2 3 
+    v2: 1 2 3 
+    v2: 1 3 2 
+    v2: 2 1 3 
+    v2: 2 3 1 
+    v2: 3 1 2 
+    v2: 3 2 1 
 */

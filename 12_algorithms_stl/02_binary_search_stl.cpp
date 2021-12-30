@@ -43,13 +43,14 @@ int main(){
     int lb_index = lb - arr;
     cout << key << ": lower bound index: " << lb_index << endl;
     
+    /* NOTE: If search value is not present in array. Then, lower bound 
+             will return address of value, greater than the search value */
+    
     // upper bound
     auto ub = upper_bound(arr, arr+size, key);
     int ub_index = ub - arr;
     cout << key << ": upper bound index: " << ub_index << endl;
 
-    /* NOTE: If search value is not present in array. Then both lower bound & upper bound
-             will return address of value, greater than the search value */
 
     // finding the occurance frequency of search key
     int freq = ub - lb;                    // upper_bound_address - lower_bound_address

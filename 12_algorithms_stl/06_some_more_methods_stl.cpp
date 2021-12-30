@@ -1,11 +1,13 @@
 /* 
-    Topic: Some Common Methods (STL)
-    
+    Topic: Some More Methods (STL)
+
     We will cover:
     - swap()
     - max()
     - min()
     - reverse()
+    - max_element()
+    - min_element()
 
 */
 
@@ -46,11 +48,28 @@ int main()
     print_array(arr,size);
 
     reverse(arr, arr+4);
-    
+
     cout << "Reverved first 4 element: ";
     print_array(arr,size);
-    cout << endl;
 
+
+    // min_element
+    auto min_ptr = min_element(arr, arr+size); 
+    /* It return a pointer to the smallest element in the range, and 
+       in case if there are more than one such element,then it points to the first one.
+       It points to the last in case the range is empty.*/
+    cout << "Minimum Element: " << *min_ptr << endl;;
+
+
+    // max_element:
+    auto max_ptr = max_element(arr, arr+size);
+    /* It returns a pointer to the largest element in the range, and 
+       in case if there are more than  one such element, then it points to the first one.
+       It points to the last in case the range is empty. */
+    cout << "Maximum Element: " << *max_ptr << endl;;
+    
+    // NOTE: both min_element() & max_element() accepts comparator function
+    
     return 0;
 }
 
@@ -66,5 +85,7 @@ OUTPUT:
     max: 20
 
     Array: 10 20 30 40 50 
-    Reverved first 4 element: 40 30 20 10 50 
+    Reverved first 4 element: 40 30 20 10 50
+    Minimum Element: 10
+    Maximum Element: 50
 */
