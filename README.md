@@ -527,6 +527,41 @@ Welcome to the exercises. This is where the magic happens!
  </blockquote>
  
 ### [10. Pointers](10_pointers)
+### [11. Dynamic Memory Allocation](11_dynamic_memory_allocation)
+### [12. Algorithms STL](12_algorithms_stl)
+<!-- Challenges - Misc --------------------  -->
+<blockquote>
+  <details>
+  <summary>
+    Excercise-05 : Algorithms STL &nbsp; [2 Questions]
+  </summary>
+    <br>
+     <table>
+      <tr>
+        <td>S.No</td>
+        <td>Excercise <img width=600/> </td>
+       </tr>
+      <tr>
+        <td>1</td>
+        <td>
+          <a href="exercise-05-algorithms_stl/01_next_permutation.cpp">
+            Next Permutation
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>
+          <a href="exercise-05-algorithms_stl/02_activity_selection_problems.cpp">
+            Activity Selection Problems
+          </a>
+        </td>
+      </tr>
+    </table>
+  </details>
+ </blockquote>
+
+### [13. Binary Search (Divide & Conquer)](13_binary_search_divide_&_conquer)
 
 ### [^^ Miscellaneous](misc)
 <!-- Challenges - Misc --------------------  -->
