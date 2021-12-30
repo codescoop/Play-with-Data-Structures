@@ -550,7 +550,7 @@ Welcome to the exercises. This is where the magic happens!
         </td>
       </tr>
       <tr>
-        <td>1</td>
+        <td>2</td>
         <td>
           <a href="exercise-05-algorithms_stl/02_activity_selection_problems.cpp">
             Activity Selection Problems
