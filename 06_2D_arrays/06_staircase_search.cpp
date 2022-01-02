@@ -1,16 +1,17 @@
 /*
     Staircase Search
-    Search row-wise & column-wise in sorted array.
+    (Search element in a row-wise & column-wise sorted array)
 */
 
 #include <iostream>
 using namespace std;
 
+// function to search element in row-wise  & col-wise sorted array
 void staircase_search(int arr[][100], int rowSize, int colSize, int key){
     int rowStart = 0;
     int colEnd = colSize-1;
     bool success  = false;
-    // search value
+
     while(rowStart <= rowSize-1 && colEnd >= 0){
         if(key == arr[rowStart][colEnd]){
             success = true;
@@ -21,7 +22,6 @@ void staircase_search(int arr[][100], int rowSize, int colSize, int key){
             colEnd--;
         }
     }
-    // print result
     if(success){
         cout << "Values found at Index: " << rowStart <<"," << colEnd << endl;
     }else{
@@ -29,6 +29,7 @@ void staircase_search(int arr[][100], int rowSize, int colSize, int key){
     }
 }
 
+// function to print array
 void print_array(int arr[][100], int rowSize, int colSize){
     for(int row=0; row<=rowSize-1; row++){
         for(int col=0; col<=colSize-1; col++){
@@ -39,13 +40,13 @@ void print_array(int arr[][100], int rowSize, int colSize){
     cout << "\n";
 }
 
-
+// function to drive code
 int main(){
     int arr[100][100] ={{1,4,8,10},{2,5,9,15},{6,16,18,20},{11,17,19,23}};  
     int rowSize = 4;
     int colSize = 4;
 
-    // Display error
+    // display array
     print_array(arr, rowSize, colSize);    
 
     int key;
@@ -55,6 +56,27 @@ int main(){
     // search value
     staircase_search(arr, rowSize, colSize, key);
 
-    cout << "\n";
     return 0;
 }
+
+/* 
+OUTPUT:
+
+Case1:
+     1  4  8 10 
+     2  5  9 15 
+     6 16 18 20 
+    11 17 19 23 
+
+    Enter the search value: 16
+    Values found at Index: 2,1
+
+Case2:
+     1  4  8 10 
+     2  5  9 15 
+     6 16 18 20 
+    11 17 19 23 
+
+    Enter the search value: 33
+    Values Not Found
+*/

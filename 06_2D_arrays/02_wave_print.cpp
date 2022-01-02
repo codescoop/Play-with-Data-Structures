@@ -40,3 +40,21 @@ int main(){
 
     return 0;
 }
+
+/* 
+OUTPUT:
+
+Case1:
+    Enter Array Rows & Cols: 3 3
+    1 2 3 
+    4 5 6 
+    7 8 9 
+    Wave Print: 1 4 7  8 5 2  3 6 9
+
+Case2:
+    Enter Array Rows & Cols: 3 6
+     1  2  3  4  5  6 
+     7  8  9 10 11 12 
+    13 14 15 16 17 18 
+    Wave Print: 1 7 13  14 8 2  3 9 15  16 10 4  5 11 17  18 12 6  
+*/

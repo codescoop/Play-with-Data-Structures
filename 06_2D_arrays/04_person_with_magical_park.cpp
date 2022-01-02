@@ -1,11 +1,14 @@
 /*
     Person with Magical Park:
-    - Provided:  s- strength
-                 k- minimum strength person should have
-    - Rules:     .     It reduces strength by 2
-                 *     It increase strength by 5
-                 #     Blocked. It move you to next row without lose of strength
-                 move  For every move strength reduce by 1 
+    - Provided:  s - strength
+                 k - minimum strength person should have
+    - Rules:     .     - It reduces strength by 2
+                 *     - It increase strength by 5
+                 #     - Blocked. It move you to next row without lose of strength
+                 move  - For every move strength reduce by 1 
+    
+    Print "Yes" or "No" depending on whether Ram can escape or not. 
+    If the answer is "Yes", also print the amount of strength he escaped with.
 */
 
 #include <iostream>
@@ -54,18 +57,48 @@ int main(){
             }else if (val == '#'){
                 break;
             }
-            
+            // for next move we lose 1 point except the last column 
             if (col != cols-1){
-                s--;            // for next move we lose 1 point except the last column 
+                s--;
             }
         }
     }
 
     if(s>k){
-        cout << "Yes \n" << s << endl;
+        cout << "Yes \nStrenght: " << s << endl;
     }else{
-        cout << "No \n" << s << endl;
+        cout << "No \nStrenght: " << s << endl;
     }
 
     return 0;
 }
+
+/* 
+OUTPUT:
+
+Case1:
+    Enter Rows & Cols: 4 4
+    Provide Minimum & Initial Strength: 5 20
+    Provide Magical Park path:  . . * . . # . . * * . . . # * *
+    
+    Magical Park: 
+    . . * . 
+    . # . . 
+    * * . . 
+    . # * * 
+    Yes
+    Strenght: 13
+
+Case2: 
+    Enter Rows & Cols: 4 4
+    Provide Minimum & Initial Strength: 5 20
+    Provide Magical Park path: . . . # . . . # . . . # . * . .
+    
+    Magical Park: 
+    . . . # 
+    . . . # 
+    . . . # 
+    . * . . 
+    No 
+    Strenght: 2
+*/

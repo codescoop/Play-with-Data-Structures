@@ -17,7 +17,7 @@ int main(){
         }
         cout << endl;
     }
-    cout << "Spiral Pattern: \n";
+    cout << "Spiral Pattern: ";
     int startRow=0;
     int startCol=0;
     int endRow=rows-1;
@@ -39,8 +39,8 @@ int main(){
         cout << " ";
         
         // 3. Last Row
-        // Note: We are not using this condition in the beginning (i.e while loop) bcz it will skip some rows in the ODD case.
-        if(startRow<endRow){                     
+        // to skip some rows in the ODD case.
+        if(startRow<=endRow){
             for(int i=endCol; i>=startCol; i--){
                 cout << arr[endRow][i] << " ";
             }
@@ -49,8 +49,8 @@ int main(){
         }
         
         // 4. First Col
-        // Note: We are not using this condition in the beginning (i.e while loop) bcz it will skip some cols in the ODD case.
-        if(startCol<endCol){
+        // to skip some cols in the ODD case.
+        if(startCol<=endCol){
             for(int i=endRow; i>=startRow; i--){
                 cout << arr[i][startCol] << " ";
             }
@@ -62,3 +62,22 @@ int main(){
     cout << "\n";
     return 0;
 }
+
+/*
+OUTPUT:
+
+Case1:
+    Enter Rows & Cols: 4 4
+     1  2  3  4 
+     5  6  7  8 
+     9 10 11 12 
+    13 14 15 16 
+    Spiral Pattern: 1 2 3 4   8 12 16   15 14 13   9 5   6 7   11   10 
+
+Case2:
+    Enter Rows & Cols: 3 6
+     1  2  3  4  5  6 
+     7  8  9 10 11 12 
+    13 14 15 16 17 18 
+    Spiral Pattern: 1 2 3 4 5 6   12 18   17 16 15 14 13   7   8 9 10 11
+*/

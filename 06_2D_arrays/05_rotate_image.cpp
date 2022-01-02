@@ -44,6 +44,7 @@ void rotate_stl(int arr[][1000],int rows,int cols){
         }
         cout << " ";
     }
+    cout << endl;
 }
 
 
@@ -67,7 +68,7 @@ int main(){
     // rotate(arr, rows, cols);
     rotate_stl(arr, rows, cols);
 
-    // display
+    // display output
     cout << "After rotating 90 degree anticlockwise: \n";
     for(int row=0; row<=rows-1; row++){
         for(int col=0; col<=cols-1; col++){
@@ -78,3 +79,19 @@ int main(){
     
     return 0;
 }
+
+/* 
+OUTPUT:
+
+    Enter Rows & Cols: 4 4
+     1  2  3  4 
+     5  6  7  8 
+     9 10 11 12 
+    13 14 15 16 
+        
+    After rotating 90 degree anticlockwise: 
+    4 8 12 16 
+    3 7 11 15 
+    2 6 10 14 
+    1 5  9 13 
+*/

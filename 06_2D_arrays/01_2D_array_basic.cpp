@@ -6,12 +6,12 @@
 using namespace std;
 
 int main(){
-    int arr[5][3] = {0,4,5,7};                           // 2D-Array 1
+    int arr[4][3] = {0,4,5,7};                           // 2D-Array 1
 
     cout << "arr[4][3] = {0,4,5,7}" <<endl;
     // Iterate over array
-    for(int row=0; row<=3; row++){
-        for(int col=0; col<=2;col++){
+    for(int row=0; row<4; row++){
+        for(int col=0; col<3;col++){
             cout << arr[row][col] << " ";
         }
         cout << endl;
@@ -34,3 +34,18 @@ int main(){
 
     return 0;
 }
+
+/* 
+OUTPUT:
+
+    arr[4][3] = {0,4,5,7}
+    0 4 5 
+    7 0 0 
+    0 0 0 
+    0 0 0 
+
+    Enter Row & Col for 2D-Array: 3 3
+    1 2 3 
+    4 5 6 
+    7 8 9 
+ */
