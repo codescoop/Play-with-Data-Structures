@@ -126,3 +126,58 @@ int main(){
 
     return 0;
 }
+
+/* 
+OUTPUT:
+
+    s0: 
+    s1: Hello
+    s2: Hello World
+    s3: Hello World
+    s4: Hello World
+    s5: abcd
+
+    s5: string length- 4
+
+    s0 is an Empty string
+
+    s0: I love c++
+    s0: I love c++and javascript
+
+    s0: I love c++and javascript
+    s0: length before removing- 24
+    s0: 
+    s0: length after removing- 0
+
+    Comparing string lexically: s1: apple | s2: mango
+    s1.compare(s2): -1
+    s2.compare(s1): 1
+    s1.compare(s1): 0
+
+    s1: apple | s2: mango
+    s1<s2: mango is lexicographic greater than apple
+
+    s1: apple
+    s1[3]: l
+
+    s1: I want to have orange juice
+    index of 'orange': 15
+
+    s1: I want to have orange juice
+    s1: I want to have  juice
+
+
+    Using FOR loop: I, ,w,a,n,t, ,t,o, ,h,a,v,e, , ,j,u,i,c,e,
+
+    FOR loop (using 'auto): I, ,w,a,n,t, ,t,o, ,h,a,v,e, , ,j,u,i,c,e,
+
+
+    Using Iterator: I, ,w,a,n,t, ,t,o, ,h,a,v,e, , ,j,u,i,c,e,
+
+    Iterator (using auto): I, ,w,a,n,t, ,t,o, ,h,a,v,e, , ,j,u,i,c,e,
+
+
+    FOR EACH loop: I, ,w,a,n,t, ,t,o, ,h,a,v,e, , ,j,u,i,c,e,
+
+    FOR EACH loop (using 'auto'): I, ,w,a,n,t, ,t,o, ,h,a,v,e, , ,j,u,i,c,e,
+*/

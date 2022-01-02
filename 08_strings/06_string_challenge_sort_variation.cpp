@@ -111,3 +111,59 @@ int main(){
     
     return 0;
 }
+
+/* 
+OUTPUT:
+Case1:
+    Enter total no of strings: 3
+
+    Enter strings (Eg: 28 12 89): 
+    28 12 899 44
+    17 65 456 78
+    56 71 598 12
+
+    Enter column number for sorting: 3
+    Want to Reverse string (true/false): false
+    Enter Comparision Type (numeric/lexicographic): numeric
+
+    After sorting: 
+    17 65 456 78
+    56 71 598 12
+    28 12 899 44
+
+Case2:
+    Enter total no of strings: 4
+
+    Enter strings (Eg: 28 12 89): 
+    17 65
+    44 56
+    32 47
+    88 05
+
+    Enter column number for sorting: 1
+    Want to Reverse string (true/false): true
+    Enter Comparision Type (numeric/lexicographic): numeric
+
+    After sorting: 
+    88 05
+    44 56
+    32 47
+    17 65
+
+Case3:
+    Enter total no of strings: 3
+
+    Enter strings (Eg: 28 12 89): 
+    121 45
+    129 68
+    120 48
+    
+    Enter column number for sorting: 1
+    Want to Reverse string (true/false): false
+    Enter Comparision Type (numeric/lexicographic): lexicographic
+
+    After sorting: 
+    120 48
+    121 45
+    129 68
+*/

@@ -22,6 +22,7 @@ int main(){
 
     string s[100];
 
+    cout << "Enter Strings: \n";
     for(int seq=0; seq <= totalStr-1; seq++){
         getline(cin,s[seq]);
     }
@@ -34,3 +35,25 @@ int main(){
     }
     return 0;
 }
+
+/* 
+OUTPUT:
+
+    Enter total number of strings: 6
+
+    Enter Strings:
+        Amandeep Verma
+        deep  
+        aman
+        Govind
+        Arvind
+        Bhim Gupta
+
+    After Sorting: 
+        aman
+        deep
+        Arvind
+        Govind
+        Bhim Gupta
+        Amandeep Verma
+*/

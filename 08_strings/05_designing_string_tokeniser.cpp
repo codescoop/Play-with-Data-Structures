@@ -52,3 +52,13 @@ int main(){
     }
     return 0;
 }
+
+/* 
+OUTPUT:
+
+    Today
+    is
+    a
+    rainy
+    day
+*/

@@ -38,24 +38,26 @@ int main(){
     // Taking Input -------------------------------------------------
 
     char ch1[100];                             // character
-    cout << "Enter elements for character array: ";
+    cout << "Enter elements for 1D character array: ";
     cin >> ch1;
+    // cin.getline(ch1, 100);
     cout << ch1 << "\n\n";
 
 
     string str1;                               // string
     cout << "Enter elements for string: ";
     cin >> str1;
+    // getline(cin, str1);
     cout << str1 << "\n\n";
 
     cin.get();   // to consume extra "\n"
 
 
     char ch2[10][100];                      // 2D character Array (10 Rows)
-    cout << "Enter character array (Row-1): ";
+    cout << "Enter 2D character array (Row-1): ";
     cin.getline(ch2[0], 100);    
     cout << ch2[0] << endl;
-    cout << "Enter character array (Row-2): ";
+    cout << "Enter 2D character array (Row-2): ";
     cin.getline(ch2[1], 100);    
     cout << ch2[1] << "\n\n";
 
@@ -70,3 +72,42 @@ int main(){
 
     return 0;
 }
+
+/* 
+OUTPUT:
+
+    c1: Hi
+    c1[0]: H
+    c1[1]: i
+
+    s0: Hi
+    s0[0]: H
+    s0[1]: i
+
+    s1: 0x7ffe6cd70620
+    s1[0]: Shyam
+    s1[1]: Ram Sharma
+    s1[1][0]: R
+    s1[1][1]: a
+    s1[1][3]: m
+
+    s2: 0x7ffe6cd70660
+    s2[0]: first row
+    s2[1]: second row
+
+    Enter elements for 1D character array: Hello
+    Hello
+
+    Enter elements for string: Hello
+    Hello
+
+    Enter 2D character array (Row-1): Ravi Sharma  
+    Ravi Sharma
+    Enter 2D character array (Row-2): Aksh Verma
+    Aksh Verma
+
+    Enter your string (Row-1): Ravi Sharma
+    Ravi Sharma
+    Enter your string (Row-2): Aksh Verma
+    Aksh Verma
+ */
