@@ -14,10 +14,10 @@ int fibonacci(int num)
     
     for (int index = 1; index <= num; index++)
     {
-        if (seq == 1){
+        if (index == 1){
             curr = first;
         }
-        else if (seq == 2){
+        else if (index == 2){
             curr = second;
         }
         else{
