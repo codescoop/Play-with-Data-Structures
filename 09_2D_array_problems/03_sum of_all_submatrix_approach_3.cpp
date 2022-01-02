@@ -41,3 +41,15 @@ int main(){
 
     return 0;
 }
+
+/* 
+OUTPUT:
+
+    Enter matrix [Rows & Columns]: 2 2
+
+    Enter matrix values: 
+    1 2
+    3 4
+
+    Sum of Submatrix: 40
+*/

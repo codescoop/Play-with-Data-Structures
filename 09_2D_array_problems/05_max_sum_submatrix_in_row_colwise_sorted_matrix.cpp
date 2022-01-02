@@ -82,3 +82,20 @@ int main(){
 
     return 0;
 }
+
+/* 
+OUTPUT:
+    Enter matrix [Rows & Columns]: 3 3
+
+    Enter matrix values: 
+    -5 -4 -1
+    -3  2  4
+     2  5  8
+
+    Suffix Sum Array: 
+     8 14 11 
+    18 19 12 
+    15 13  8 
+
+    Max Sum Submatrix: 19
+*/

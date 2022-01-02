@@ -1,7 +1,7 @@
 /*
     Search in Row and Col wise Sorted Matrix
 
-    Sample Input: 3 5
+    Sample Input: 3 4
                   10 20 30 40
                   15 25 35 45
                   27 29 37 48
@@ -105,3 +105,20 @@ int main()
 
     return 0;
 }
+
+/* 
+OUTPUT:
+
+    Enter matrix [Rows & Columns]: 3 4
+
+    Enter matrix values: 
+    10 20 30 40
+    15 25 35 45
+    27 29 37 48
+
+    Enter Search key: 29
+
+    [Linear Search]   Value Found at Index: 2,1
+    [Binary Search]   Value Found at Index: 2,1
+    [Stepwise Search] Value Found at Index: 2,1
+*/

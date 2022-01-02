@@ -66,3 +66,30 @@ int main(){
     cout << endl;
     return 0;
 }
+
+/* 
+OUTPUT:
+
+    Enter matrix [Rows & Columns]: 2 2
+    
+    Enter matrix values: 
+    1 2
+    3 4
+
+    All Submatrix : 
+    [0,0], 
+    [0,0], [0,1], 
+    [0,0], [1,0], 
+    [0,0], [0,1], [1,0], [1,1], 
+    ----------
+    [0,1], 
+    [0,1], [1,1], 
+    ----------
+    [1,0], 
+    [1,0], [1,1], 
+    ----------
+    [1,1], 
+    ----------
+
+    Sum of Sub Matrix: 40
+ */

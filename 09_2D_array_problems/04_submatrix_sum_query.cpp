@@ -109,11 +109,40 @@ int main(){
     cout << "Enter total number of queries: ";
     cin >> queries;
     for(int idx=0; idx<=queries-1; idx++){
-        cout << "Enter index: ";
+        cout << "Enter submatrix index: ";
         cin >> tli >> tlj >> bri >> brj;
         result = submatrixSum(prefixSumArr,tli,tlj,bri,brj);
-        cout << result << endl;
+        cout << "Submatrix Sum: " << result << endl;
     }
 
     return 0;
 }
+
+/* 
+OUTPUT:
+
+    Enter matrix [Rows & Columns]: 4 5
+
+    Enter matrix values: 
+    1 2 3 4 6
+    5 3 8 1 2
+    4 6 7 5 5
+    2 4 8 9 4
+
+    Prefix Sum Matrix: 
+    1 3 6 10 16 
+    6 11 22 27 35 
+    10 21 39 49 62 
+    12 27 53 72 89 
+
+    Enter total number of queries: 3
+
+    Enter Submatrix Index: 0 0 1 1
+    Submatrix Sum: 11
+    
+    Enter Submatrix Index: 2 2 3 4
+    Submatrix Sum: 38
+
+    Enter Submatrix Index: 1 2 3 3
+    Submatrix Sum: 38
+ */
