@@ -30,6 +30,14 @@ int main(){
     cin.getline(arr, 1000);
 
     removeDuplicate(arr);
+    cout << "Output: ";
     cout << arr << endl;
     return 0;
 }
+
+/* 
+OUTPUT:
+
+    Enter your string: coodddddiinggg
+    Output: coding
+*/

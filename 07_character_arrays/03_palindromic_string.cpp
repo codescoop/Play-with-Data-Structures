@@ -33,6 +33,21 @@ int main(){
         cout << "Not a Palendromic string" << endl;
     }
 
-
     return 0;
 }
+
+/* 
+OUTPUT:
+
+Case1:
+    Enter your sentence: abc121cba
+    Yes, it's Palendromic string
+
+Case2:
+    Enter your sentence: ab cd dc ba
+    Yes, it's Palendromic string
+
+Case3:
+    Enter your sentence: aman
+    Not a Palendromic string
+*/
