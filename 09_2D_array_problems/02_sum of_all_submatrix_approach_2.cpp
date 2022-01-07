@@ -22,12 +22,12 @@ void prefixSumMatrix1(int **arr, int rows, int cols, int **psa){
     for (int col=0; col<cols; col++)
         psa[0][col] = arr[0][col];
 
-    // Do column wise sum
+    // Do row wise sum
     for (int row=1; row<rows; row++)
         for (int col=0; col<cols; col++)
             psa[row][col] = arr[row][col] + psa[row-1][col];
 
-    // Do row wise sum
+    // Do column wise sum
     for (int row=0; row<rows; row++)
         for (int col=1; col<cols; col++)
             psa[row][col] += psa[row][col-1];
@@ -46,7 +46,7 @@ void prefixSumMatrix1(int **arr, int rows, int cols, int **psa){
     Here if we simply add psa[i][j-1] and psa[i-1][j], we get sum of elements from a[0][0] to a[i-1][j-1] twice, 
     So we subtract psa[i-1][j-1]. 
 */
-   void prefixSumMatrix2(int **arr, int rows, int cols, int **psa){
+void prefixSumMatrix2(int **arr, int rows, int cols, int **psa){
     // corner case [row=col=0]
     psa[0][0] = arr[0][0];
     // For first row [row=0 & col>0]
