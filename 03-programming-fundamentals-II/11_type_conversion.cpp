@@ -45,7 +45,7 @@
     - STRING to INT    :    stoi(str)
 
     - CHAR to STRING   :    append(1,ch)   or   string class   or   '+=' operator   or  '=' operator
-    - STRING to CHAR   :    c_str()
+    - STRING to CHAR   :    (char *)str.c_str()
                             strcpy(char_array, str.c_str())
 */
 
@@ -115,15 +115,23 @@ int main(){
     cout << "s3 is of type: " << typeid(s3).name() << "\n\n";
 
 
-    // STRING to CHAR
+    // STRING to CHAR (method 1)
     str = "125ab";
     int len = str.length();
     char c[len+1];
     strcpy(c, str.c_str());            // c_str() function return a "const pointer"
 
     cout << "str: " << str <<  endl;
-    cout << "c[]: " << c <<  endl;
+    cout << "c[]: " << c <<  "\n\n";
     // cout << "c is of type: " << typeid(c).name() << "\n\n";            //ERROR
+
+
+    // STRING to CHAR (method 2)
+    str = "965abCD";
+    char *cptr = (char *)str.c_str();   /* c_str() function return a "const pointer". 
+                                           So, we are "type casting" const pointer to  (char *)  */
+    cout << "str: " << str <<  endl;
+    cout << "cptr: " << cptr <<  endl;
 
     return 0;
 }
@@ -160,4 +168,7 @@ OUTPUT:
 
     str: 125ab
     c[]: 125ab
+
+    str: 965abCD
+    cptr: 965abCD
 */

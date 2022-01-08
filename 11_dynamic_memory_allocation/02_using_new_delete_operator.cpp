@@ -63,23 +63,28 @@ int main(){
 
 
     /* 
-        new Operator & Initilizing values
+        'new' Operator & Initilizing values
     */
     // Example- 1
+    int *n = new int(74);          // initilization with value 74
+    cout << "Value of n : " << *n << "\n\n";
+    delete n;                         // deallocate memory
+
+    // Example- 2
     char *ch = new char('B');          // initilization with character 'B'
     cout << "Value of ch : " << *ch << "\n\n";
     delete ch;                         // deallocate memory
 
-    // Example- 2
+    // Example- 3
     int size;
     cout << "Enter Array Size: ";
     cin >> size;
     
-    int *arr = new int[size]{0};        // initilization with all zeros
-
+    int *arr = new int[size]{1,2,3};        // initilization
     cout << "Array Elements: ";
     for(int idx=0; idx<=size-1; idx++){
-      cout  << arr[idx] << " ";
+    //   cout  << arr[idx] << " ";
+      cout  << *(arr+idx) << " ";
     }
     
     delete [] arr;                      // deallocate memory
@@ -89,12 +94,15 @@ int main(){
 }
 
 /* 
-OUTPUT: 
+OUTPUT:
+
     num : 10
     *p : 10
 
+    Value of n : 74
+
     Value of ch : B
 
-    Enter Array Size: 5
-    Array Elements: 0 0 0 0 0 
+    Enter Array Size: 6
+    Array Elements: 1 2 3 0 0 0 
 */
