@@ -48,7 +48,7 @@ bool canPlaceCowAtThisSepration(int stalls[], int totalStalls, int totalCows, in
         {
             prevCowStallLocation = currentStallLocation;       // assign this location to the cow
             cowsCount++;                                       // increment cow count
-            if(cowsCount == totalStalls){
+            if(cowsCount == totalCows){
                 return true;
             }
         }
@@ -64,22 +64,21 @@ int getDistance(int *stalls, int totalStalls, int totalCows)
     /* assuming search space for cow sepration:
        - minimum distance at which cow can be placed/seprated = 0
        - maximum distance at which cow can be placed/seprated = (last stall location value - first stall location value)
-       Now apply binary search on this search space [0 to (last stall location - first stall location)]
+       Now apply binary search on this search space i.e [0 to (last stall location - first stall location)]
     */
     int start = 0;                                      // minimum cow sepration distance
     int end = stalls[totalStalls-1] - stalls[0];        // maximum cow sepration distance
-    
+
     int distance = 0;
     while(start <= end)
     {
         int mid = (start+end)/2;
 
         bool cowSeprationStatus = canPlaceCowAtThisSepration(stalls, totalStalls, totalCows, mid);
-        // cout << "mid: " << mid << " | ";
-        // cout << "cowSeprationStatus: " << cowSeprationStatus << endl;
+
         if(cowSeprationStatus){
             distance = mid;              // getting most potential distance value
-            start = mid +1;
+            start = mid+1;
         }
         else{
             end = mid-1;
@@ -125,5 +124,8 @@ int main(){
 /* 
 OUTPUT:
 
-
+    Enter total testcases: 1
+    Enter number of stalls & cows: 5 3
+    Enter stalls locations: 1 2 4 8 9
+    Largest Minimum distance: 3
 */
