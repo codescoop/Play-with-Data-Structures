@@ -7,7 +7,9 @@
 
     Input Format: First line contains integer t as number of test cases. 
                   Next t lines contains two lines. For each test case, 
-                  1st line contains two integers n and m which represents the number of books and students and 2nd line contains n space separated integers which represents the number of pages of n books in ascending order.
+                  1st line contains two integers n and m which represents the number of books and students and 
+                  2nd line contains n space separated integers which represents the number of pages of 
+                  n books in ascending order.
 
     Constraints:  1 < t < 50
                   1< n < 100
