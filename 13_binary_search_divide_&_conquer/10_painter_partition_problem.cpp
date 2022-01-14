@@ -1,32 +1,28 @@
 /* 
     Topic - Painter's Partition Problem
     
-    You have to paint N boards of length {A0, A1, A2, A3 … AN-1}. There are K painters available and 
-    you are also given how much time a painter takes to paint 1 unit of board. 
-    You have to get this job done as soon as possible under the constraints that any painter will 
-    only paint contiguous sections of board. Return the ans % 10000003
+    Given K painters to paint N boards where each painter takes 1 unit of time to paint 1 unit of boards 
+    i.e. if the length of a particular board is 5, it will take 5 units of time to paint the board. 
+    Compute the minimum amount of time to paint all the boards.
 
-    Input Format: First line contains three space seperated integers N,K and T ,where
-                  T = Time taken to print each board by one painter
-                  K = No of painters available ,
-                  N = Size of array,
-                  Next line contains N space seperated positive integers denoting size of N boards.
+    Note that: Every painter can paint only contiguous segments of boards.
+    A board can only be painted by 1 painter at maximum.
 
-    Constraints:  1 <= N,K,T,Li <= 100000
+    Input Format: First line contains K which is the number of painters. 
+                  Second line contains N which indicates the number of boards. 
+                  Third line contains N space separated integers representing the length of each board.
 
-    Output Format: Return minimum time required to paint all boards % 10000003.
+    Constraints: 1 <= K <= 10
+                 1 <= N <= 10
+                 1<= Length of each Board <= 10^8
 
-    Sample Input: 5 
-                  2
+    Output Format: Output the minimum time required to paint the board.
+
+    Sample Input: 2
                   2
                   1 10
 
-    Sample Output: 50
-    
-    Explanation: The first painter can paint the first board in 5 units of time and the 
-                 second painter will take 50 units of time to paint the second board. 
-                 Since both can paint simultaneously , the total time required to paint both 
-                 the boards is 50.
+    Sample Output : 10
 */
 
 #include <iostream>
@@ -34,9 +30,36 @@
 using namespace  std;
 
 // function to check if it is possible to paint all boards in the given time
-bool isPossible(int board[], int totalBoard, int totalPainter, int given_time){
-    // code
-    return false/true;
+bool isPossible(int board[], int totalBoard, int totalPainter, int given_time)
+{
+    int time_taken_per_unit = 1;     // painter takes 1 unit of time to paint 1 unit of boards
+
+    int painter_used = 1;
+    int time_taken_till_now = 0;
+    for(int idx=0; idx<= totalBoard-1; idx++)
+    {
+        // when board length is greater than allocated time
+        if(board[idx] > given_time){
+            return false;
+        }
+
+        // time taken to paint new board
+        int time_taken_for_new_board = board[idx]*time_taken_per_unit;
+
+        if((time_taken_till_now + time_taken_for_new_board) <= given_time )
+        {
+            time_taken_till_now += time_taken_for_new_board;
+        }
+        else
+        {
+            painter_used++;
+            time_taken_till_now = time_taken_for_new_board;
+            if(painter_used > totalPainter){
+                return false;
+            }
+        }
+    }
+    return true;
 }
 
 
@@ -51,18 +74,17 @@ int getMinTime(int *board, int totalBoard, int totalPainter){
             sum_boards_length += board[idx] ;
     }
 
-    // Max time taken by cook (i.e Time take to cook all prata by the cook having last rank)
-    int time = 1;
-    int time_taken_paint_all_board_by_single_painter = sum_boards_length * time;
+    // Max time taken by painter (i.e Time take to paint all boards by single painter)
+    int time_taken_per_unit = 1;    // painter takes 1 unit of time to paint 1 unit of boards
+    int time_taken_to_paint_all_board_by_single_painter = sum_boards_length * time_taken_per_unit;
 
     int start = 1;
-    int end = time_taken_paint_all_board_by_single_painter;
+    int end = time_taken_to_paint_all_board_by_single_painter;
     int timeTaken = INT_MAX;
 
     while(start<=end)
     {
         int mid = (start+end)/2;
-
         // check if it is possible to paint all boards in given time (i.e mid value)
         int status = isPossible(board, totalBoard, totalPainter, mid);
 
@@ -112,5 +134,14 @@ int main(){
 /* 
 OUTPUT:
 
-   
+    Enter total testcases: 2
+
+    Enter number of Painter's & Board: 2 2
+    Enter length of boards: 1 10
+    Minimum time to paint all boards: 10
+
+    Enter number of Painter's & Board: 2 3
+    Enter length of boards: 10 11 10
+    Minimum time to paint all boards: 21
+
 */

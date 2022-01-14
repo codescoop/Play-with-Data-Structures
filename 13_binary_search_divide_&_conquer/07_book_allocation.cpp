@@ -34,7 +34,7 @@ using namespace  std;
 
 
 // function to check if it is possible to divide the books among students
-bool isPossibleToAssignBooks(int books[], int totalBooks, int totalStudents, int curr_min)
+bool isPossibleToAssignBooks(int books[], int totalBooks, int totalStudents, int curr_allocation)
 {
     int studentCount = 1;                 // maintaining the count of no of students
     int pages_reading = 0;                // maintaining the no of page read by students
@@ -47,11 +47,11 @@ bool isPossibleToAssignBooks(int books[], int totalBooks, int totalStudents, int
            As, if books is having less pages than the minimum required pages.Then, we cannot assign 
            the book to the student 
         */
-        // if (books[idx] > curr_min){
+        // if (books[idx] > curr_allocation){
         //     return false;
         // }
 
-        if(pages_reading + books[idx] > curr_min){
+        if(pages_reading + books[idx] > curr_allocation){
             studentCount++;
             pages_reading = books[idx];              // assigning current book to next student
             if(studentCount > totalStudents){

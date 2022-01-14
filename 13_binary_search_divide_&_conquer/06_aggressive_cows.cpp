@@ -33,7 +33,7 @@
 using namespace  std;
 
 // function to check if cow can be seprated by this distance
-bool canPlaceCowAtThisSepration(int stalls[], int totalStalls, int totalCows, int min_sepration)
+bool canPlaceCowAtThisSepration(int stalls[], int totalStalls, int totalCows, int curr_sepration)
 {
     // place the cow at first stall
     int prevCowStallLocation = stalls[0];    // variable to maintain the state of previous cow location
@@ -43,8 +43,8 @@ bool canPlaceCowAtThisSepration(int stalls[], int totalStalls, int totalCows, in
     {
         int currentStallLocation = stalls[idx];
         
-        // placing the cow if distance is greater than minimum distance
-        if((currentStallLocation-prevCowStallLocation) >= min_sepration )
+        // placing the cow if distance is greater than given distance
+        if((currentStallLocation-prevCowStallLocation) >= curr_sepration )
         {
             prevCowStallLocation = currentStallLocation;       // assign this location to the cow
             cowsCount++;                                       // increment cow count
