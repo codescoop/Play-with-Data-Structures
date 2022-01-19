@@ -529,7 +529,7 @@ Welcome to the exercises. This is where the magic happens!
 ### [10. Pointers](10_pointers)
 ### [11. Dynamic Memory Allocation](11_dynamic_memory_allocation)
 ### [12. Algorithms STL](12_algorithms_stl)
-<!-- Challenges - Misc --------------------  -->
+<!-- Challenges - Algorithms STL --------------------  -->
 <blockquote>
   <details>
   <summary>
@@ -562,6 +562,152 @@ Welcome to the exercises. This is where the magic happens!
  </blockquote>
 
 ### [13. Binary Search (Divide & Conquer)](13_binary_search_divide_&_conquer)
+<!-- Challenges - Sorting & Searching --------------------  -->
+<blockquote>
+  <details>
+  <summary>
+    Excercise-06 : Sorting & Searching. &nbsp; [16 Questions]
+  </summary>
+    <br>
+     <table>
+      <tr>
+        <td>S.No</td>
+        <td>Excercise <img width=600/> </td>
+       </tr>
+      <tr>
+        <td>1</td>
+        <td>
+          <a href="exercise-06-sorting-n-searching/01_kth_root.cpp">
+            Kth Root
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>
+          <a href="exercise-06-sorting-n-searching/02_binary_search.cpp">
+            Binary Search
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>
+          <a href="exercise-06-sorting-n-searching/03_book_allocation_problem.cpp">
+            Book Allocation Problem
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>
+          <a href="exercise-06-sorting-n-searching/04_sorting_in_linear_time.cpp">
+            Sorting in Linear Time
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>
+          <a href="exercise-06-sorting-n-searching/05_bubble_sort.cpp">
+            Bubble Sort
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>
+          <a href="exercise-06-sorting-n-searching/06_aggressive_cows.cpp">
+            Aggressive Cows
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>
+          <a href="exercise-06-sorting-n-searching/07_selection_sort.cpp">
+            Selection Sort
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>
+          <a href="exercise-06-sorting-n-searching/08_painter_problem.cpp">
+            Painter Problem
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td>
+          <a href="exercise-06-sorting-n-searching/09_counting_sort.cpp">
+            Counting Sort
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td>
+          <a href="exercise-06-sorting-n-searching/10_insertion_sort.cpp">
+            Insertion Sort
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>11</td>
+        <td>
+          <a href="exercise-06-sorting-n-searching/11_winning_scholarship.cpp">
+            Winning Scholarship
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>12</td>
+        <td>
+          <a href="exercise-06-sorting-n-searching/12_string_sort.cpp">
+            String Sort
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>13</td>
+        <td>
+          <a href="exercise-06-sorting-n-searching/13_help_aman_to_search.cpp">
+            Help Aman to Search
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>14</td>
+        <td>
+          <a href="exercise-06-sorting-n-searching/14_find_upper_and_lower_bound.cpp">
+            Find Upper and Lower bound
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>15</td>
+        <td>
+          <a href="exercise-06-sorting-n-searching/15_pivot_of_sorted_and_rotated_array.cpp">
+            Pivot of Sorted and Rotated
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>16</td>
+        <td>
+          <a href="exercise-06-sorting-n-searching/16_sort_game.cpp">
+            Sort Game
+          </a>
+        </td>
+      </tr>
+    </table>
+  </details>
+ </blockquote>
+
+
+### [14. Bit Manipulation](14_bit_manipulation)
 
 ### [^^ Miscellaneous](misc)
 <!-- Challenges - Misc --------------------  -->
