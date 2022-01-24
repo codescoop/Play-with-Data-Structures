@@ -14,11 +14,10 @@
 #include <cstring>
 using namespace std;
 
-
+// function to extract out character which maps with set-bit of number n
 void filterChars(char c[], int n)
 {
     int idx=0;
-
     while(n)
     {
         int last_bit = n&1;
@@ -36,6 +35,7 @@ void filterChars(char c[], int n)
 void printSubsets(char c[])
 {
     int len = strlen(c);
+    // iterating over the list of numbers
     for(int i=0; i < (1<<len); i++)
     {
         filterChars(c, i);
@@ -73,4 +73,19 @@ OUTPUT:
     ac
     bc
     abc
+
+
+Approach:
+
+    - Extracting out character which maps with set-bit from number 0 to 7
+    
+           cba
+       0 : 000  |  " "
+       1 : 001  |  a
+       2 : 010  |  b
+       3 : 011  |  ab
+       4 : 100  |  c 
+       5 : 101  |  ac
+       6 : 110  |  bc
+       7 : 111  |  abc
 */
