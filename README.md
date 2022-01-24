@@ -708,9 +708,90 @@ Welcome to the exercises. This is where the magic happens!
 
 
 ### [14. Bit Manipulation](14_bit_manipulation)
+<!-- Challenges - Bitmasking ---------------------->
+<blockquote>
+  <details>
+  <summary>
+    Excercise-07 : Bitmasking &nbsp; [8 Questions]
+  </summary>
+    <br>
+     <table>
+      <tr>
+        <td>S.No</td>
+        <td>Excercise <img width=600/> </td>
+       </tr>
+      <tr>
+        <td>1</td>
+        <td>
+          <a href="exercise_07_bitmasking/01_playing_with_bits.cpp">
+            Playing With Bits
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>
+          <a href="exercise_07_bitmasking/02_unique_number_I.cpp">
+            Unique Number - I
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>
+          <a href="exercise_07_bitmasking/03_xor_profit_problem.cpp">
+            XOR Profit Problem
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>
+          <a href="exercise_07_bitmasking/04_count_set_bits.cpp">
+            Count Set Bits
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>
+          <a href="exercise_07_bitmasking/05_unique_number_II.cpp">
+            Unique Numbers - II
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>
+          <a href="exercise_07_bitmasking/06_unique_number_III.cpp">
+            Unique Numbers - III
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>
+          <a href="exercise_07_bitmasking/07_incredible_hulk.cpp">
+            Incredible Hulk
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>
+          <a href="exercise_07_bitmasking/08_power.cpp">
+            Power(O(logn))
+          </a>
+        </td>
+      </tr>
+    </table>
+  </details>
+ </blockquote>
+
+### [15. Number Theory Basics](15_number_theory_basics)
 
 ### [^^ Miscellaneous](misc)
-<!-- Challenges - Misc --------------------  -->
+<!-- Challenges - Misc ---------------------->
 <blockquote>
   <details>
   <summary>
