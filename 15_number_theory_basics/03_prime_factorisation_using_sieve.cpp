@@ -95,7 +95,7 @@ int main()
     int N = 1000000;
 
     int p[N] = {0};
-    vector<int> primes = primeSieve(p, 100);
+    vector<int> primes = primeSieve(p, N);
 
     int t;
     cout << "Enter testcases: ";

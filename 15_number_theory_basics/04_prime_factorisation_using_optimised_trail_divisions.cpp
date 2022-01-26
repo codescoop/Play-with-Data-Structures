@@ -18,20 +18,20 @@ using namespace std;
 vector<pair<int,int>> primeFactors(int num)
 {
     vector<pair<int,int> > factors;       // to store prime factor & its count
-    int cnt;
+    int power_cnt;
 
     for(int i=2; i*i<=num; i++)
     {
         if(num%i == 0)
         {
             // keep on dividing by i till it is divisible
-            cnt = 0;
+            power_cnt = 0;
             while(num%i == 0)
             {
-                cnt++;
+                power_cnt++;
                 num = num/i;
             }
-            factors.push_back(make_pair(i,cnt));
+            factors.push_back(make_pair(i,power_cnt));
         }
     }
     

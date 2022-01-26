@@ -54,8 +54,8 @@ bool isPrimeOptimised(int n)
 void prime_sieve(int *p, int num)
 {
     // special cases
-    p[0] = p[1] = 0;
-    p[2] = 1;
+    p[0] = p[1] = 0;     // 0 & 1 are not prime
+    p[2] = 1;            // 2 is prime
 
     //first mark all odd number's as Prime (Initialisation)
     for(int i=3; i<=num; i+=2)
