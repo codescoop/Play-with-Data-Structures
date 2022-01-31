@@ -789,6 +789,79 @@ Welcome to the exercises. This is where the magic happens!
  </blockquote>
 
 ### [15. Number Theory Basics](15_number_theory_basics)
+<!-- Challenges - Number Theory ---------------------->
+<blockquote>
+  <details>
+  <summary>
+    Excercise-08 : Number Theory &nbsp; [7 Questions]
+  </summary>
+    <br>
+     <table>
+      <tr>
+        <td>S.No</td>
+        <td>Excercise <img width=600/> </td>
+       </tr>
+      <tr>
+        <td>1</td>
+        <td>
+          <a href="exercise_08_number_theory/01_modular_exponentiation.cpp">
+            Modular Exponentiation
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>
+          <a href="exercise_08_number_theory/02_raman_and_primes.cpp">
+            Raman and Primes
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>
+          <a href="exercise_08_number_theory/03_gcd.cpp">
+            GCD
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>
+          <a href="exercise_08_number_theory/04_amit_loves_candy.cpp">
+            Amit Loves Candy
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>
+          <a href="exercise_08_number_theory/05_divisible_subarray.cpp">
+            Divisible Subarray
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>
+          <a href="exercise_08_number_theory/06_lcm.cpp">
+            LCM
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>
+          <a href="exercise_08_number_theory/07_prime_visits.cpp">
+            Prime Visits
+          </a>
+        </td>
+      </tr>
+    </table>
+  </details>
+ </blockquote>
+
+### [16. Recursion-I Basics](16_recursion_I_basics)
 
 ### [^^ Miscellaneous](misc)
 <!-- Challenges - Misc ---------------------->
