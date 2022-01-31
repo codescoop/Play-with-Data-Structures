@@ -4,9 +4,18 @@
     - We generally use modulo properties to compute large numbers by reducing it into smaller numbers.
     
     Properties of Modulo (%)
-    - (a+b)%m = ((a%m)+(b%m))%m
 
-    - (a-b)%m = ((a%m)-(b%m)+m)%m      Eg: a = 8   b = 3    m = 7
+    - Modular Addition : 
+      (a+b) mod m = ((a mod m) + (b mod m)) mod m
+      i.e (a+b)%m = ((a%m)+(b%m))%m     Eg: a = 15   b = 17    m = 7
+                                         (15 + 17) % 7
+                                         = ((15 % 7) + (17 % 7)) % 7
+                                         = (1 + 3) % 7
+                                         = 4 % 7
+                                         = 4
+
+    - Modular Subtraction:
+      (a-b)%m = ((a%m)-(b%m)+m)%m      Eg: a = 8   b = 3    m = 7
                                            (a-b)%m  = (8 - 3) % 7
                                                     = 5 % 7
                                                     = 5
@@ -15,18 +24,51 @@
                                                               = (-2 + 7) % 7
                                                               = 5 % 7
                                                               = 5
-    - (a*b)%m = ((a%m)*(b%m))%m
+    
+    - Modular Multiplication:
+      (a x b) mod m = ((a mod m) x (b mod m)) mod m
+      (a*b)%m = ((a%m)*(b%m))%m      Eg: a = 12   b = 13    m = 5
+                                        (12 x 13) % 5
+                                        = ((12 % 5) x (13 % 5)) % 5
+                                        = (2 x 3) % 5
+                                        = 6 % 5
+                                        = 1
 
-    - (a/b)%m = ((a%m)*(b-inverse % m))%m
-         b-inverse is Multiplicative Modulo Inverse
-         Eg:  we will be computing modulo inverse of 6 with respect to 7 
+    - Modular Division:
+      (a / b) mod m = (a x (inverse of b if exists)) mod m
+      (a/b)%m = ((a%m)*(b-inverse % m))% m
+      (b-inverse is Multiplicative Modulo Inverse)
+
+   -  Modular Inverse :
+      The modular inverse of a mod m exists only if a and m are relatively prime (ie gcd(a, m) = 1)
+      Hence, for finding inverse of a under modulo m,
+      if (a x b) mod m = 1, then b is modular inverse of a.
+         Eg1: a = 5, m = 7
+              (5 x 3) % 7 = 1
+              hence, 3 is modulo inverse of 5 under 7.
+         Eg:  we will be computing modulo inverse of 6 under 7 
               (6*y)%7 ~= 1
               Now, we need a value of y such that modulo of product-of 6 & y by 7 is 1
               So when y =6, then,(6*6)%7
                                  = 36%7
                                  = 1
+   - Modular Exponentiation:
+     Finding a^b mod m is the modular exponentiation. There are two approaches for this 
+     – recursive and iterative.
+         Eg:  a = 5, b = 2, m = 7
+              (5^2)% 7 = 25%7 = 4
 
-    CRT (Chinese remainder theorem)
+
+
+   Below are some more Problems related to Modular Arithmetic
+   - Find Modular Exponentiation (both recursive and iterative)
+   - Compute n! under modulo p
+   - How to compute mod of a big number?
+   - Find value of y mod (2 raised to power x)
+
+
+
+   CRT (Chinese remainder theorem)
     -  In mathematics, the Chinese remainder theorem states that if one knows the remainders of the 
        Euclidean division of an integer n by several integers, 
        then one can determine uniquely the remainder of the division of n by the product of these integers, 
@@ -40,13 +82,12 @@
        by some given divisors, leaves given remainders.
 
 
-
-    Problem: We are given two arrays:  num[0...k-1] and rem[0...k-1]. 
-             In num[0...k-1], every pair is coprime (gcd for every pair is 1). 
-             We need to find minimum positive number x such that:   x % num[0]    =  rem[0], 
-                                                                    x % num[1]    =  rem[1], 
-                                                                    ------------------------
-                                                                    x % num[k-1]  =  rem[k-1]
+    Problem (CRT): We are given two arrays:  num[0...k-1] and rem[0...k-1]. 
+                   In num[0...k-1], every pair is coprime (gcd for every pair is 1). 
+                   We need to find minimum positive number x such that:   x % num[0]    =  rem[0], 
+                                                                          x % num[1]    =  rem[1], 
+                                                                          ------------------------
+                                                                          x % num[k-1]  =  rem[k-1]
 
     Explanation: Basically, we are given k numbers which are pairwise coprime, 
                  and given remainders of these numbers, when an unknown number x is divided by them. 
