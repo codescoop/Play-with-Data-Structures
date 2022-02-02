@@ -73,12 +73,6 @@ int main()
             freq[csum]++;      // increase the frequency for range 0 to N-1
         }
         
-        for(int i=0; i<size; i++)
-        {
-            cout << freq[i] << ", ";
-        }
-        cout << endl;
-
         ll ans = 0;
         // iterate to all position & do nCr for r>2
         for(int i=0; i<size; i++)
