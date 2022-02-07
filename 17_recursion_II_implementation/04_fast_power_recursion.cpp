@@ -7,7 +7,8 @@
 #include <iostream>
 using namespace std;
 
-// compute base^power
+
+// compute base^power (Time complexity: O(N))
 int power(int b, int p)
 {
     // base case
@@ -17,10 +18,10 @@ int power(int b, int p)
     }
     // rec case
     return b * power(b, p-1); 
-
 }
 
 
+// compute base^power (Time complexity: O(LogN)
 int fast_power(int b, int p)
 {
     // base case
@@ -32,12 +33,36 @@ int fast_power(int b, int p)
     int smaller_ans = fast_power(b, p/2);
     
     // for odd
-    if(b&1)
+    if(p&1)
     {
         return b*smaller_ans*smaller_ans;
     }
     // for even 
     return smaller_ans*smaller_ans;
+
+    /*
+        APPROACH:
+        
+        When power is ODD:
+           b^p  =   b(b^p/2)^2
+        When power is EVEN:
+           b^p  =   (b^p/2)^2
+        
+        Eg: base  = a
+            power = 9
+            a^9  = a*(a^8)
+                       |
+            (a^8) => (a^4)^2compute base^power 
+                       |
+            (a^4) => (a^2)^2
+                       |
+            (a^2) => (a^1)^2
+                       |
+            (a^1) =>  a(a^0)
+                         |
+            (a^0) =>    (1)
+        So, Number of steps needed to convert p to 1 is LogN
+    */
 }
 
 
