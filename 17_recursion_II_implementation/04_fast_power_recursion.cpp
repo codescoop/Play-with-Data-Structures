@@ -32,12 +32,12 @@ int fast_power(int b, int p)
     // rec case
     int smaller_ans = fast_power(b, p/2);
     
-    // for odd
+    // whem power is odd
     if(p&1)
     {
         return b*smaller_ans*smaller_ans;
     }
-    // for even 
+    // whem power is even 
     return smaller_ans*smaller_ans;
 
     /*
