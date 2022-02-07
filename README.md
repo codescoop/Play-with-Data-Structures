@@ -862,6 +862,7 @@ Welcome to the exercises. This is where the magic happens!
  </blockquote>
 
 ### [16. Recursion-I Basics](16_recursion_I_basics)
+### [17. Recursion-I Implementation](17_recursion_II_implementation)
 
 ### [^^ Miscellaneous](misc)
 <!-- Challenges - Misc ---------------------->
