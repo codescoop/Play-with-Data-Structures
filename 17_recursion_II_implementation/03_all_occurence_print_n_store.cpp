@@ -10,20 +10,20 @@
 using namespace std;
 
 // store all occurence in linear search (recursion)
-int storeOcc(int *arr, int idx, int size, int key, int *output, int j)
+int storeOcc(int *arr, int idx, int size, int key, int *output, int len)
 {
     // base case
     if(size == 0)
     {
-        return j;
+        return len;            // return length of output array 
     }
     // recursive case
-    if(arr[idx] == key)
+    if(arr[idx] == key)                                        // search & store value
     {
-        output[j] = idx;
-        j++;
+        output[len] = idx;
+        len++;
     }
-    return storeOcc(arr, idx+1, size-1, key, output, j);
+    return storeOcc(arr, idx+1, size-1, key, output, len);     // recursive call
 }
 
 
