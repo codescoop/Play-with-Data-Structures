@@ -1,11 +1,9 @@
 /*
     Topic - Bubble Sort Recursion
-
 */
 
 #include <iostream>
 using namespace std;
-
 
 // Bubble Sort Recursively
 void bubble_sort(int *arr, int size)
@@ -16,16 +14,16 @@ void bubble_sort(int *arr, int size)
         return;
     }
     // recursive case
-    for (int j = 0; j < size - 1; j++)
+    for (int j = 0; j < size-1; j++)
     {
         // Take the largest element towards the end of array by pairwise swapping
-        if (arr[j] > arr[j + 1])
+        if (arr[j] > arr[j+1])
         {
-            swap(arr[j], arr[j + 1]);
+            swap(arr[j], arr[j+1]);
         }
     }
     // Make a recursice call on unsorted part of array
-    return bubble_sort(arr, size - 1);
+    return bubble_sort(arr, size-1);
 
     /*
         APPROACH:
@@ -56,7 +54,7 @@ void bubble_sort_recursive(int *arr, int size, int j)
         return bubble_sort_recursive(arr, size-1, 0);
     }
     // rec case
-    if(arr[j]>arr[j+1])
+    if(arr[j] > arr[j+1])
     {
         swap(arr[j], arr[j+1]);
     }
