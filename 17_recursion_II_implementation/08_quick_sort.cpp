@@ -10,13 +10,50 @@
 #include <iostream>
 using namespace std;
 
+// partition function
+int partition(int *arr, int start, int end)
+{
+    // Inplace (can't take extra array)
+
+    int i = start-1;   // pointer for maintaning region smaller than pivot
+    int j = start;     // pointer for maintaning region larger than pivot
+
+    int pivot = end;   // pivot is the last array element
+    
+    // create smaller & larger region
+    while(j<end)
+    {
+        if(arr[j] <= arr[pivot])
+        {
+            i++;
+            swap(arr[j], arr[i]);
+        }
+        j++;
+    }
+    // place the pivot element at its position
+    swap(arr[i+1], arr[pivot]);
+    // return the pivot index
+    return i+1;
+
+    
+}
 
 // quick Sort
 void quick_sort(int *arr, int start, int end)
 {
-    // code
+    // base case: for 0 & 1 element
+    if (start >= end)
+    {
+        return;
+    }
+    // rec case
+    int p_idx = partition(arr, start, end);
+    // left subarray
+    quick_sort(arr, start, p_idx-1);
+    // right subarray
+    quick_sort(arr, p_idx+1, end);
+    return;
 }
-
 
 // function to drive code
 int main()
@@ -33,7 +70,7 @@ int main()
     }
 
     // sort array
-    quick_sort(arr, 0, size-1);
+    quick_sort(arr, 0, size - 1);
 
     cout << "After Quick Sort: ";
     for (int i = 0; i < size; i++)
@@ -47,6 +84,39 @@ int main()
 
 /*
 OUTPUT:
+    Enter array size: 7
+    Enter Elements: 2 7 8 6 1 5 4
+    After Quick Sort: 1 2 4 5 6 7 8 
 
 
- */
+Explaination: 
+    
+    when, n=7, arr[] = {2,7,8,6,1,5,4}
+    Now, partition(arr, 0, 6)
+
+    when i=-1, j=0      |2|7|8|6|1|5|4|
+         pivot = 6     i j           pivot
+                      
+         i=0, j=1       |2|7|8|6|1|5|4|       as a[j]<a[pivot], swap(arr[j], arr[i])
+                         i j         pivot
+
+         i=0, j=2       |2|7|8|6|1|5|4|
+                         i   j       pivot
+
+         i=0, j=3       |2|7|8|6|1|5|4|
+                         i     j     pivot
+
+         i=0, j=4       |2|7|8|6|1|5|4|       as a[j]<a[pivot], swap(arr[j], arr[i])
+                         i       j   pivot
+
+         i=1, j=5       |2|1|8|6|7|5|4|
+                           i       j pivot
+
+        As, j=6, exit loop
+
+         i=1, j=6       |2|1|4|6|7|5|8|       swap(arr[i+1], arr[pivot])
+         pivot=2           i pivot   j
+
+        Now, return pivot index (i.e i+1)
+
+*/
