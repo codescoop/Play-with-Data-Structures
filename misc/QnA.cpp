@@ -1,6 +1,16 @@
 /* 
     Question & Answers
 
+Q:  Why start + (end – start)/2 is preferable method for calculating middle of an array
+    over (start + end)/2 ?
+
+S:  Because (start + end)/2 can caused OVERFLOW !
+    when "start" and "end" are all about INT_MAX , then (start+end) of course will be overflow !
+    (Note that end - start may overflow, but only if start < 0 or end < 0.)
+    
+    Ref- https://stackoverflow.com/questions/38688028/why-prefer-start-end-start-2-over-start-end-2-when-calculating-the
+
+
 Q:  Why did we make an array ofsize 100005?
     
 S:  As given in the question that N goes upto 10^5, so we take an array of size of 10^5 + 5 so that 
