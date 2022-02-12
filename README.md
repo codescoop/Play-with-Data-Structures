@@ -862,7 +862,9 @@ Welcome to the exercises. This is where the magic happens!
  </blockquote>
 
 ### [16. Recursion-I Basics](16_recursion_I_basics)
-### [17. Recursion-I Implementation](17_recursion_II_implementation)
+### [17. Recursion-II Implementation](17_recursion_II_implementation)
+### [18. Recursion-III Quick Thinking](18_recursion_III_quick_thinking)
+### [19. Recursion-IV Subset Based](19_recursion_IV_subset_based)
 
 ### [^^ Miscellaneous](misc)
 <!-- Challenges - Misc ---------------------->
