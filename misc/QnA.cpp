@@ -1,6 +1,12 @@
 /* 
     Question & Answers
 
+Q:  Basic Maths Concepts
+
+S:  Permutation & Combination - https://www.mathsisfun.com/combinatorics/combinations-permutations.html
+    Pascal's Triangle         - https://www.mathsisfun.com/pascals-triangle.html
+    Logarithms & Exponents    - https://www.mathsisfun.com/algebra/logarithms.html
+
 Q:  Why start + (end – start)/2 is preferable method for calculating middle of an array
     over (start + end)/2 ?
 
