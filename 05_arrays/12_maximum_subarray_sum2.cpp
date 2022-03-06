@@ -27,7 +27,14 @@ void subarrays(int arr[], int range, int csum[]){
             int currentSum = 0;
             
             // calculating sum using cumulative array
-            currentSum = csum[end] - csum[start-1];    
+            if(start == 0)
+            {
+                currentSum = csum[end] - 0;    
+            }
+            else
+            {
+                currentSum = csum[end] - csum[start-1];    
+            }
 
             // Updating maximum sum if currentSum  > maximumSum
             if(currentSum > maxSum){
@@ -79,10 +86,19 @@ int main(){
 
 /* 
 OUTPUT:
+Csae 1:
     Enter total elements: 9
     Enter values:        -4 1 3 -2 6 2 -1 -4 -7
     Cumulative Subarray: -4 -3 0 -2 4 6 5 1 -6 
 
     Maximun Sum: 10
     Subarray having Maximum Sum: 1,3,-2,6,2,
+
+Case 2:
+    Enter total elements: 5
+    Enter values:        100 -1 -3 -2 -6
+    Cumulative Subarray: 100 99 96 94 88 
+
+    Maximun Sum: 100
+    Subarray having Maximum Sum: 100
 */
