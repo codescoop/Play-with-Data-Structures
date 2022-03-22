@@ -46,7 +46,8 @@
         "streambuf": "cpp",
         "typeinfo": "cpp",
         "cstring": "cpp",
-        "bitset": "cpp"
+        "bitset": "cpp",
+        "set": "cpp"
     },
     "cmake.configureOnOpen": false
 }
