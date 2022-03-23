@@ -865,6 +865,9 @@ Welcome to the exercises. This is where the magic happens!
 ### [17. Recursion-II Implementation](17_recursion_II_implementation)
 ### [18. Recursion-III Quick Thinking](18_recursion_III_quick_thinking)
 ### [19. Recursion-IV Subset Based](19_recursion_IV_subset_based)
+### [20. Recursion-V Backtracking](20_recursion_V_backtracking)
+### [21. More Sorting Techniques & Problems](21_more_Sorting_techniques_n_problems)
+### [22. Space Time Complexity Analysis](22_space_time_complexity_analysis)
 
 ### [^^ Miscellaneous](misc)
 <!-- Challenges - Misc ---------------------->
