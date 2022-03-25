@@ -2,57 +2,57 @@
     Space Time Complexity - Introduction
 
     - Order Complexity of Algorithms
-      1. Time Complexity  - Time Complexity is amount of time taken by the algorithm to run as a 
+      1. Time Complexity  - Time Complexity is amount of time taken by the algorithm to run as a
                             function of the input size
-      2. Space Complexity - Space complexity of an algorithm quantifies the amount of space or memory 
+      2. Space Complexity - Space complexity of an algorithm quantifies the amount of space or memory
                             taken by an algorithm to run as a function of the length of the input.
 
     NOTE: If there is trade off between Space & Time. Then, mostly the preference is given to Time.
-      
+
     Also, we will be doing the analysis as a function of input.
            time  -> f(N)              // time is a function of input size
            space -> f(N)              // space is a function of input size
-         
+
     Complexity Notation: [Big-oh, Omega & Theta]
         1. Big Oh Notation defines an upper bound of an algorithm, it bounds a function only from above.
         2. Omega Notation defines an lower bound of an algorithm i.e provides an asymptotic lower bound.
         3. Theta Notation bounds a functions from above and below, so it defines exact asymptotic behavior.
 
-        NOTE: when we sure of one single value then we express complexity of function in Theta Notations. 
+        NOTE: when we sure of one single value then we express complexity of function in Theta Notations.
               But, if we are NOT sure of one single value then we express it using Big-O & Omega Notations.
 
     Complexity Cases Analysis: [Best, Worst & Average]
         Various types of Time Complexities Case which can be analyzed for the algorithm:
-        1. Best case time complesity: Calculating lower bound on running time of an algorithm and is 
+        1. Best case time complesity: Calculating lower bound on running time of an algorithm and is
            the time taken in the case that causes minimum number of operations to be executed.
-        2. Worst case time Complexity: Calculating upper bound on running time of an algorithm and is 
+        2. Worst case time Complexity: Calculating upper bound on running time of an algorithm and is
            the time taken in the case that causes maximum number of operations to be executed.
-        3. Average Time complexity Algorithm: In average case analysis, we take all possible inputs and 
-           calculate computing time for all of the inputs. Sum all the calculated values and divide 
+        3. Average Time complexity Algorithm: In average case analysis, we take all possible inputs and
+           calculate computing time for all of the inputs. Sum all the calculated values and divide
            the sum by total number of inputs.
            Average case = ___All_Possible_case_time____
                                   No. of Cases
-           As, in average case, we have to compute time for all of the inputs. So mostly we don't calculate avg. time 
+           As, in average case, we have to compute time for all of the inputs. So mostly we don't calculate avg. time
 
-    Note: DON'T relate Upper Bound(Big-Oh) with best Case, or Lower Bound(Omega) with worst Case or
+    Note: DON'T relate Upper Bound(Big-Oh) with worst Case, or Lower Bound(Omega) with best Case or
                 Theta with the Average Case beacuse they are NOT Related with each other.
 
           Complexity "Case" & "Notations" are not related to each other.
-          As, Notation are for the functions 
+          As, Notation are for the functions
               where as
               Case are just type of analysis done on the algorithms.
           So, All "Cases" like best, worst & average can be written or expressed using any "Notations" [Big-O, Omega or Theta]
 
-          Eg: For linear Search:  Best Case time - B(n) = 1          Worst Case time - W(n) = n  
-                                                   B(n) = O(1)                         W(n) = Big O(1)    
+          Eg: For linear Search:  Best Case time - B(n) = 1          Worst Case time - W(n) = n
+                                                   B(n) = O(1)                         W(n) = Big O(1)
                                                    B(n) = Omega(1)                     W(n) = Omega(1)
                                                    B(n) = Theta(1)                     W(n) = Theta(1)
-                   
 
-    Order of Growth:  
+
+    Order of Growth:
     1 < logn < sqrt(n) < n < nlogn < n^2 < n^2logn < n^3 < ... < 2^n < 3^n < ... < n^n
 
-    Note: n^n  grows faster than n!. 
+    Note: n^n  grows faster than n!.
           Below is illustrated by just considering the first couple of numbers:-
            ________________ _____________
           |____n^n_________|____n!_______|
@@ -62,7 +62,7 @@
           |    4^4 = 256   |    4!=24    |
           |    5^5 = 3125  |    5!=120   |
           |____..._________|____...______|
-         
+
          So, range of n!:   1 < n! < n^n
      ________________ __________ ______________________________________________
     |                |          |___________Value_of_N_------->________________|
@@ -103,15 +103,14 @@
     |     ...       | ...  |   ...     |   ...  |    ...    |    ...   |  ...   | ... |  ...   | ...  |
     |_______________|______|___________|________|___________|__________|________|_____|________|___ __|
 
-    
+
     How to do analysis?
-    - Practical Approach  : Run each and every algoirithm & then decide which one is better. 
+    - Practical Approach  : Run each and every algoirithm & then decide which one is better.
                             NOTE: it may be infeasible to code all the algorithm & then check the complexity
                             as it will waste a lot of time.
     - Theoretical Approach : Judge the complexity of algorithm before we write the code. [Mostly Preferred]
 
 */
-
 
 // Compare & Analysing the time complexity of Bubble Sort & Merge Sort [Using Practical Appraoch]
 #include <iostream>
@@ -119,18 +118,17 @@
 #include <ctime>
 using namespace std;
 
-
 // bubble sort
 void bubble_sort(int arr[], int range)
-{   
+{
     // iteration count
     for (int step = 1; step < range; step++)
-    {   
+    {
         // iterating unsorted array
-        for (int idx=0; idx < (range-step); idx++)    // [range-step] -> To decrease length of unsorted array from the end.
-        {   
+        for (int idx = 0; idx < (range - step); idx++) // [range-step] -> To decrease length of unsorted array from the end.
+        {
             // pairwise swapping
-            if (arr[idx] > arr[idx + 1])   
+            if (arr[idx] > arr[idx + 1])
             {
                 swap(arr[idx], arr[idx + 1]);
             }
@@ -138,15 +136,14 @@ void bubble_sort(int arr[], int range)
     }
 }
 
-
 // function to merge two subarrays using 2-pointers approach
 void merge(int *arr, int start, int mid, int end)
 {
-    int i = start;              // pointer for left subarray
-    int j = mid + 1;            // pointer for right subarray
-    int k = start;              // pointer for temp array 
+    int i = start;   // pointer for left subarray
+    int j = mid + 1; // pointer for right subarray
+    int k = start;   // pointer for temp array
 
-    int temp[start + end + 1];  // create temp array to store merged values
+    int temp[start + end + 1]; // create temp array to store merged values
 
     // Merge the two subarrays back into temp array in sorted order
     while (i <= mid && j <= end)
@@ -177,7 +174,6 @@ void merge(int *arr, int start, int mid, int end)
     }
 }
 
-
 // Merge Sort
 void merge_sort(int *arr, int start, int end)
 {
@@ -199,16 +195,15 @@ void merge_sort(int *arr, int start, int end)
     return;
 }
 
-
 // function to print array
-void print_array(int arr[], int range){
+void print_array(int arr[], int range)
+{
     for (int i = 0; i < range; i++)
     {
         cout << arr[i] << " ";
     }
     cout << endl;
 }
-
 
 // funtion to drive code
 int main()
@@ -219,7 +214,7 @@ int main()
 
     // Create Reverse Sorted array
     int a1[size], a2[size];
-    for (int i = size-1; i >= 0; i--)
+    for (int i = size - 1; i >= 0; i--)
     {
         a1[i] = a2[i] = i;
     }
@@ -228,19 +223,18 @@ int main()
     // cout << "Array: ";
     // print_array(a1, size);
 
-
     time_t start, end;
 
     start = clock();
     bubble_sort(a1, size);
     end = clock();
-    cout << "Time Taken [Bubble Sort]: " << end-start << " ms" << endl;
+    cout << "Time Taken [Bubble Sort]: " << end - start << " ms" << endl;
 
     start = clock();
     // sort(a2, a2+size);
-    merge_sort(a2, 0, size-1);
+    merge_sort(a2, 0, size - 1);
     end = clock();
-    cout << "Time Taken [Merge Sort]:  " << end-start << " ms" << endl;
+    cout << "Time Taken [Merge Sort]:  " << end - start << " ms" << endl;
 
     // // print the sorted array
     // cout << "Bubble Sort [Array]: ";
@@ -251,8 +245,7 @@ int main()
     return 0;
 }
 
-
-/* 
+/*
 OUTPUT:
 
 Case1:
@@ -276,7 +269,7 @@ Case4:
     Time Taken [Merge Sort]: 16798 ms
 
 
-Comparison & Time Complexity: 
+Comparison & Time Complexity:
      ___________ ____________________________
     |  (Input)  |______(Time_taken_---->)____|
     |_____N_____|__Bubble_Sort_|__Merge_Sort_|
@@ -287,7 +280,7 @@ Comparison & Time Complexity:
     |  100000   |   22233906   |   16798     |
     |___________|______________|_____________|
 
-So, Time Coxplexity:  O(N^2)       O(NLogN)   
+So, Time Coxplexity:  O(N^2)       O(NLogN)
 
 
 Reference:-
@@ -300,6 +293,16 @@ Abdul bari - https://www.youtube.com/watch?v=A03oI0znAoc [Asymptotic Notations: 
              https://www.youtube.com/watch?v=p1EnSvS3urU [Time Complexity - "While" & "if"]
              https://www.youtube.com/watch?v=NI4OKSvGAgM [Properties of Asymptotic Notations]
 
+
+BYTSINDIA - https://www.youtube.com/watch?v=gqORBHtjVlE [Time Complexity_Part_1]
+            https://www.youtube.com/watch?v=PZZW5mJydyc [Time Complexity of Single Loops  - With Examples]
+            https://www.youtube.com/watch?v=vRAMUDcwXy4 [Time Complexity Of Nested Loops - With Examples]
+            https://www.youtube.com/watch?v=VbzMDQgQf28 [Summary Of Time Complexity - Loops - with example]
+            https://www.youtube.com/watch?v=Jy34vvIpCcE [Space Complexity]
+
 Lalitha Natraj - https://www.youtube.com/watch?v=Yffvd3pkTW4 [Time Complexity - Bubble Sort]
+
+Stack Overflow - What does O(log n) mean exactly? 
+                 https://stackoverflow.com/questions/2307283/what-does-olog-n-mean-exactly
 
  */
