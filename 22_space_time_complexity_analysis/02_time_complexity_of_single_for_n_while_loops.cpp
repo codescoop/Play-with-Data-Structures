@@ -128,13 +128,13 @@
                                              
     Thus,                                    
     ___i__|___s______________    __i_+_s__   
-       1  |   1                   (i + 1)    
-       3  |   1+2                 (i + 2)    
-       6  |   1+2+3               (i + 3)    
-      10  |   1+2+3+5             (i + 4)    
+       1  |   1                              
+       3  |   1+2                 (1 + 2) = 3
+       6  |   1+2+3               (3 + 3) = 6
+      10  |   1+2+3+5             (6 + 4) = 10
      ...  |   ....                  ...      
      ...  |   ....                  ...      
-     ...  |   1+2+3+5+...+k       (i + k)    
+       n  |   1+2+3+5+...+k         ...     
                                              
     Now, when the loop ends then,            
           i > n                              
@@ -204,6 +204,46 @@
     So, time complexity = O(loglogn)         |
     ----------------------------------------------------------------------------------------
 
+    void test13()                         
+    {                                     
+        p = 0                              
+
+        for(i=1; i<n; i=i*2)           // loop1
+        {                                 
+            p++;                  
+        }                                 
+
+        for(j=1; j<p; j=j*2)           // loop2
+        {                                 
+            cout << "*";                  
+        }                                 
+    }                                     
+
+    As,  time complexity of LOOP-1 = logn
+
+    So,  no of times p is running, 
+                            i.e  p = logn
+
+    Now, time complexity of LOOP-2 = log(p)
+                                   = log(logn)    // putting p = logn
+                                   = loglogn
+
+    Time Complexity - O(loglogn)          
+
+    ----------------------------------------------------------------------------------------
+    Summary:-
+
+    ____For_Loop_____________                            Time Complexity
+    for(i=1; i<n; i++)                                      O(n)
+    for(i=1; i<n; i=i+200)        O(n/200)                  O(n)
+    for(i=n; i>1; i--)                                      O(n)
+    for(i=1; i<n; i=i*2)          O(logn) base2             O(logn)
+    for(i=1; i<n; i=i*3)          O(logn) base3             O(logn)
+    for(i=1; i<n; i=i/2)          O(logn) base2             O(logn)
+    for(i=1; i*i<n; i++)                                    O(sqrt(n))
+    for(i=1,j=1; i<n; i=i+j);j++;                           O(sqrt(n))
+
+    ----------------------------------------------------------------------------------------
     Reference: https://www.youtube.com/watch?v=PZZW5mJydyc [Time Complexity of Single Loops  - With Examples]
 
 */

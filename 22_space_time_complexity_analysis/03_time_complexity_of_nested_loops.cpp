@@ -135,6 +135,7 @@
       = n * (_1_+_1_+_1_+_1_+        +_1_)                           
               1   2   3   4            n                             
                                                                      
+      = n * (harmonic progression)                                                             
       = n * (log(n) base2)                                           
       = nlogn                                                        
                                                                      

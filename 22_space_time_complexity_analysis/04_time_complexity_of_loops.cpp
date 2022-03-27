@@ -55,14 +55,14 @@
     {                                                                
         for(int j=1; j<=3; j=j+1)                                
         {                                                        
-            cout << "*";                                         
+            cout << "A";                                         
         }                       
 
         for(int i=1; i<=5; i=i+1)                                    
         {                                                            
-            for(int j=1; j<=n; j=j+i)                                
+            for(int j=1; j<=n; j=j+1)                                
             {                                                        
-                cout << "*";                                         
+                cout << "B";                                         
             }                                                        
         }                                                            
     }                                                                
@@ -80,7 +80,7 @@
 
         for(int i=1; i<=4; i=i+1)                                    
         {                                                            
-            for(int j=1; j<=n; j=j+i)                                
+            for(int j=1; j<=n; j=j+1)                                
             {                                                        
                 cout << "B";                                         
             }                                                        
@@ -88,9 +88,9 @@
 
         for(int i=1; i<=2; i=i+1)                                    
         {                                                            
-            for(int j=1; j<=n; j=j+i)                                
+            for(int j=1; j<=n; j=j+1)                                
             {                                                        
-                for(int k=1; k<=n; k=k+i)                                
+                for(int k=1; k<=n; k=k+1)                                
                 {                                                        
                     cout << "B";                                         
                 }                                                        
