@@ -43,16 +43,22 @@
              ...
              ...
 
-    Also, if n is small 
-          i.e n<=20,
-          then 2^20 = 2^10 * 2^10
-                    = 1000 * 1000
-                    = 10^6
-    So, if we have n=30 or n=40 in any problem, this algorith will not work.
-    Because in 1sec time limit, we can do 10^8 operations. 
+    NOTE: In O(2^n) time complexity (i.e Exponential)
+          if n is small, 
+          i.e n<=20, then 2^20 (instructions are executed)
+                        = 2^10 * 2^10
+                        = 1000 * 1000                     // 2^10 = 1024 ~ 1000
+                        = 10^6 (instructions are executed)
+          
+          So, if we have n=30 or n=40 in any problem, this algorithm will not work.
+    
+    Now, The general rule of thumb, 
+         In 1-sec time limit, we can do 10^8 operations. 
             (i.e  1 sec -> 10^8 operations)
-            Now, if n=30  ] ->  then 10^12 operations (i.e it will take 10^4 seconds)
-                    n=40  ]          So, it will give time limit exceeded error.
+         So, if n=40 then 2^40 operations ~= 10^12 operations (i.e it will take 10^4 seconds)
+                                              So, it will give time limit exceeded error.
+                n=30 then 2^30 operations ~= 10^9 operations (i.e it will take 10^4 seconds)
+                                              So, it will give time limit exceeded error.
                               
     So, we should avoid using this complexity.
    -------------------------------------------------------------------
