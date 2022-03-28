@@ -3,6 +3,7 @@
    
    INDEX:
     Q1:  Basic Maths Concepts
+         What does the 'e' mean on a calculator's answer?
     Q2:  Why start + (end – start)/2 is preferable method for calculating middle of an array
          over (start + end)/2 ?
     Q3:  Why did we make an array ofsize 100005?
@@ -13,15 +14,15 @@
     Q6:  Calculate-power-function
     Q7:  Sequence [1 + 1/2 + 1/3 + 1/4 + .. + 1/n] = logn. How ?
     Q8:  Difference between an Arithmetic and Geometric Progressions
-         Commenly used AP, GP sequences? 
+         Commenly used AP, GP & Other sequences? 
     Q9:  Program to find sum of series [1 + 1/2 + 1/3 + 1/4 + .. + 1/n]
    Q10:  How many approx loops are allowed in 1 sec time limit?
          How many Number of Instructions/Opertions can be executed in 1 sec?
          How many instructions can be executed in Codeforces and TopCoder judge PCs in one second?
    Q11:  Gigabyte(GB) = 1024 MB  or Gibibyte(Gib) = 1000 MiB ?
    Q12:  Mbps Vs MBps?
-   Q13:  How many digit a data type can store ?
-         What is the range of a long long int and an int in powers of 10?
+   Q13:  What is the range of a long long int and an int in powers of 10?
+         How many digit a data type can store ?
          Which data type should i use to store upto 18 digits in a variable in c++?
    Q14:  Does type unsigned long long int is it enough for 1 - 10^9 range?
    Q15:  What range of values can integer types store in C++ ??
@@ -34,6 +35,25 @@ Q1: Basic Maths Concepts
 S1: Permutation & Combination - https://www.mathsisfun.com/combinatorics/combinations-permutations.html
     Pascal's Triangle         - https://www.mathsisfun.com/pascals-triangle.html
     Logarithms & Exponents    - https://www.mathsisfun.com/algebra/logarithms.html
+
+    Scientific notation :
+    - It is a way of writing very large or very small numbers.
+    - A number is written in scientific notation when a number between 1 and 10 is multiplied by a power of 10. 
+      For example, 650,000,000 can be written in scientific notation as 6.5 ✕ 10^8.
+                   -53000 = -5.3 x 10^4
+                      987 = 9.87 x 10^2
+            0.00000000751 = 7.51 × 10^(−9)
+                 4321.768 = 4.321768 × 10^3
+
+    NOTE: E notation is basically the same as scientific notation except that 
+          the letter e is substituted for "x 10^".
+
+    - What does the 'e' mean on a calculator's answer?
+      An “e” or “E” on a calculator is a way to represent scientific notation.
+      Informally, the number after the “e” tells you how many digits long the number is. 
+      So, 5.55e+15 is 15 digits long. (5,555,585,300,000,000)
+          2e+6 would be a 2 followed by 6 zeros (2,000,000).
+          7.2e15 = 7.2 × 10^15
 
 
 ------------------------------------------------------------------------------------------
@@ -225,7 +245,9 @@ Q10: How many approx loops are allowed in 1 sec time limit?
      How many Number of Instructions/Opertions in 1 sec?
      How many instructions can be executed in Codeforces and TopCoder judge PCs in one second?
 
-A10:- Every online judges have different time limits depending upon their server
+A10: In 1 sec, we use can use maximum of 10^8 iterations (approx)
+    
+    - Every online judges have different time limits depending upon their server
     - Number of iterations that can occur in one second is different for different languages. 
        E.g. The number of iterations that can occur in one second in C++ is much more than that in Python.
     - Plus, the time required also depends upon what is happening in those iterations.
@@ -383,8 +405,8 @@ A12: Mbps : Megabits per second.     (used for file size)
 
 
 ------------------------------------------------------------------------------------------
-Q13: How many digit a data type can store ?
-     What is the range of a long long int and an int in powers of 10?
+Q13: What is the range of a long long int and an int in powers of 10?
+     How many Digits a data type can store ?
      Which data type should i use to store upto 18 digits in a variable in c++?
 
 A13: 18-digits gives a maximum possible value of 999,999,999,999,999,999 ≈ 9.9 × 10^17. 
@@ -392,8 +414,10 @@ A13: 18-digits gives a maximum possible value of 999,999,999,999,999,999 ≈ 9.9
      Try using the uint64_t type to ensure that you get this.
 
      There is a rule by which you can calculate how many digit a data type can store and
-     the logic is  2^10 = 10^3 (nearly) 
-     i.e as long long int is an 64 bit integer, it can support  18 digit number because 2^64 = 10^18(nearly) by the above rule. If you want to handle more digits, you can go for boost library.
+     the logic is  2^10 ~= 10^3 (nearly)
+                  (1024)  (1000)
+     i.e as long long int is an 64 bit integer, it can support 18 digit number because 2^64 = 10^18(nearly) by the above rule.
+         If you want to handle more digits, you can go for boost library.
 
      Reference - [Bits and Bytes] https://web.stanford.edu/class/cs101/bits-bytes.html
                  https://stackoverflow.com/questions/49653592/type-unsigned-long-long-int-is-it-enough-for-1-109-range
@@ -426,34 +450,34 @@ Q15: What range of values can integer types store in C++ ??
      what are the ranges of [unsigned  & unsigned] short int, int, long int?
 
 A15: 
-     ____________________________________________________________________________________________________________
-    |    Data Type        | Size  |       Range                       |       Range          |   No Of Digits    | 
-    |_____________________|(bytes)|___________________________________|_____(In Binary)______|___(In Decimal)____|
-    | short int           |   2   | -32,768 to 32,767                 | -(2^15) to (2^15)-1  |                   |
-    | unsigned short int  |   2   |  0 to 65,535                      |   2^16               |                   |
-    |                     |       |                                   |                      |                   |
-    | int                 |   4   | -2,147,483,648 to 2,147,483,647   | -(2^31) to (2^31)-1  | -10^9  to 10^9    |
-    | unsigned int        |   4   |  0 to 4,294,967,295               |   2^32               |  10^9             |
-    |                     |       |                                   |                      |                   |
-    | long int            |   4   | -2,147,483,648 to 2,147,483,647   | -(2^31) to (2^31)-1  | -2*10^9 to 2*10^9 |
-    | unsigned long int   |   4   |  0 to 4,294,967,295               |   2^32               | 10^9              |
-    |                     |       |                                   |                      |                   |
-    | long long int       |   8   |-(2^63)to 9,223,372,036,854,775,807| -(2^63) to (2^63)-1  |-2*10^18 to 2*10^18|
-    | unsign long long int|   8   |  0 to 18,446,744,073,709,551,615  |   2^64               | 10^18             |
-    |                     |       |                                   |                      |                   |
-    | signed char         |   1   | -128 to 127                       | -(2^7) to (2^7)-1    |                   |
-    | unsigned char       |   1   |  0 to 255                         |   2^8                |                   |
-    |                     |       |                                   |                      |                   |
-    | bool                |   1   |  false & true                     |                      |                   |
-    |                     |       |                                   |                      |                   |
-    | float               |   4   |  3.4E ± 38                        |  7 significant digits|                   |
-    | double              |   8   |  1.7E ± 308                       | 15 significant digits|                   |
-    | long double         |  12   |                                   |                      |                   |
-    |                     |       |                                   |                      |                   |
-    | wchar_t             | 2or4  |  1 wide character                 |                      |                   |
-    |                     |       |                                   |                      |                   |
-    | void                |   0   |  valueless or Empty               |                      |                   |
-    '------------------------------------------------------------------------------------------------------------'
+     __________________________________________________________________________________________________________________
+    |    Data Type        |    Size     |       Range                       |       Range          |   No Of Digits    | 
+    |_____________________|_(In bytes)__|___________________________________|_____(In Binary)______|___(In Decimal)____|
+    | short int           |  2 (16 bit) | -32,768 to 32,767                 | -(2^15) to (2^15)-1  |                   |
+    | unsigned short int  |  2          |  0 to 65,535                      |   2^16               |                   |
+    |                     |             |                                   |                      |                   |
+    | int                 |  4 (32 bit) | -2,147,483,648 to 2,147,483,647   | -(2^31) to (2^31)-1  | -10^9  to 10^9    |
+    | unsigned int        |  4          |  0 to 4,294,967,295               |   2^32               |  10^9             |
+    |                     |             |                                   |                      |                   |
+    | long int            |  4 (32 bit) | -2,147,483,648 to 2,147,483,647   | -(2^31) to (2^31)-1  | -2*10^9 to 2*10^9 |
+    | unsigned long int   |  4          |  0 to 4,294,967,295               |   2^32               | 10^9              |
+    |                     |             |                                   |                      |                   |
+    | long long int       |  8 (64 bit) |-(2^63)to 9,223,372,036,854,775,807| -(2^63) to (2^63)-1  |-2*10^18 to 2*10^18|
+    | unsign long long int|  8          |  0 to 18,446,744,073,709,551,615  |   2^64               | 10^18             |
+    |                     |             |                                   |                      |                   |
+    | signed char         |  1  (8 bit) | -128 to 127                       | -(2^7) to (2^7)-1    |                   |
+    | unsigned char       |  1          |  0 to 255                         |   2^8                |                   |
+    |                     |             |                                   |                      |                   |
+    | bool                |  1  (8 bit) |  false & true                     |                      |                   |
+    |                     |             |                                   |                      |                   |
+    | float               |  4          |  3.4E ± 38                        |  7 significant digits|                   |
+    | double              |  8 (64 bit) |  1.7E ± 308                       | 15 significant digits|                   |
+    | long double         | 12          |                                   |                      |                   |
+    |                     |             |                                   |                      |                   |
+    | wchar_t             | 2or4        |  1 wide character                 |                      |                   |
+    |                     |             |                                   |                      |                   |
+    | void                |   0         |  valueless or Empty               |                      |                   |
+    '------------------------------------------------------------------------------------------------------------------'
 
     Referernce - https://stackoverflow.com/questions/1819189/what-range-of-values-can-integer-types-store-in-c
 
