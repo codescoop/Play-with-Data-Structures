@@ -868,13 +868,37 @@ Welcome to the exercises. This is where the magic happens!
 ### [20. Recursion-V Backtracking](20_recursion_V_backtracking)
 ### [21. More Sorting Techniques & Problems](21_more_Sorting_techniques_n_problems)
 ### [22. Space Time Complexity Analysis](22_space_time_complexity_analysis)
+<!-- Challenges - Space Time Complexity Analysis ---------------------->
+<blockquote>
+  <details>
+  <summary>
+    Excercise-10 : Space Time Complexity Analysis &nbsp; [15 Questions]
+  </summary>
+    <br>
+     <table>
+      <tr>
+        <td>S.No</td>
+        <td>Excercise <img width=600/> </td>
+       </tr>
+      <tr>
+        <td>1</td>
+        <td>
+          <a href="exercise_10_space_time_complexity/">
+            15 Questions with Answers
+          </a>
+        </td>
+      </tr>
+    </table>
+  </details>
+ </blockquote>
+
 
 ### [^^ Miscellaneous](misc)
 <!-- Challenges - Misc ---------------------->
 <blockquote>
   <details>
   <summary>
-    Excercise-10 : Misc. &nbsp; [5 Questions]
+    Excercise-11 : Misc. &nbsp; [5 Questions]
   </summary>
     <br>
      <table>
