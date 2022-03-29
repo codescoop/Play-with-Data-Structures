@@ -883,7 +883,7 @@ Welcome to the exercises. This is where the magic happens!
       <tr>
         <td>1</td>
         <td>
-          <a href="exercise_10_space_time_complexity/">
+          <a href="exercise_10_space_time_complexity/01_exercise_time_space_complexity.pdf">
             15 Questions with Answers
           </a>
         </td>
