@@ -155,20 +155,23 @@ Q8: Difference between an Arithmetic and Geometric Progressions
     Commenly used AP, GP sequences? 
 
 S8: - Sum of the First n Positive Integers 
-      S(n) ​= 1+2+3+4+.....+n  = __n*(n+1)__
+      S(n) ​= 1+2+3+4+.....+n  = __n*(n+1)__  = O(n^2)
                                     2
 
     - Sum of the Squares of the First n Positive Integers 
-      S(n) ​= 1+4+9+16+...+n^2  =  __n*(n+1)*(2n+1)__
+      S(n) ​= 1+4+9+16+...+n^2  =  __n*(n+1)*(2n+1)__  = = O(n^3)
                                           6
 
     - Sum of the Cubes of the First n Positive Integers
-      S(n) ​= 1+8+27+64+...+n^3  =  __n^2_*_(n+1)^2__
+      S(n) ​= 1+8+27+64+...+n^3  =  __n^2_*_(n+1)^2__  = O(n^4)
                                          4
 
-    - Sequence [1 + 1/2 + 1/3 + 1/4 + .. + 1/n] = logn
+    - Sequence [1 + 1/2 + 1/3 + 1/4 + .. + 1/n] = logn  = O(logn)
 
-    - Sequence [(1+2+4+8+16+ ..... 2^(n-1)]   =   _(2^(n-1)_-_1)__
+    - sum of 1 +1/2 + 1/4 + 1/8 + 1/16 … infinity = 2
+      [1 +0.5 + 0.25 +0.125+ ...eventually adds up to 2  ]
+      
+    - Sequence [(1+2+4+8+16+ ..... 2^(n-1)]   =   _(2^(n-1)_-_1)__   = O(2^n)
                                                         n-1
       [Above sequence is calculated by formula: Sum of n terms in Geometric Progressions]
 

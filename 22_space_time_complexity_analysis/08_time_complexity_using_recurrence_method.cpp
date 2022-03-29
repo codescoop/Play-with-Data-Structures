@@ -4,7 +4,26 @@
     - Bubble Sort 
     - Binary Search
 
-    -------------------------------------------------------------------
+    What is Recurrence Relation ?
+    - In mathematics, a recurrence relation is an equation that expresses the nth term of a sequence as 
+      a function of the k preceding terms, for some fixed k (independent from n), which is called 
+      the order of the relation. 
+
+    - A recurrence relation is an equation that defines a sequence based on a rule that gives the 
+      next term as a function of the previous term(s).
+
+    Eg: Factorial Representation:
+        n!=n(n-1)! ; n>0
+        (To find the further values we have to expand the factorial notation, 
+         where the succeeding term is dependent on the preceding one.)
+
+        Fibonacci Numbers:
+        Fn = Fn-1 + Fn-2
+
+    Reference- https://byjus.com/maths/recurrence-relation/
+
+
+    ----------------------------------------------------------------------------------------------------
     // bubble sort
              _________________
     Array:  |_|_|_|_|_|_|_|_|_|
@@ -31,7 +50,7 @@
      T(3)  =  k*(3)  +  T(2)
      T(2)  =  k*(2)  +  T(1)
      T(1)  =  k*(1)  +   0
-    ---------------------------- // By adding all the above equations, we can get the total time
+    ---------------------------- // By adding all the above equations on both sides & cancellation, we can get the total time
      T(n)  = k*n + k*(n-1) + k*(n-2) + ...... + k*(1)
            = k*(n + n-1 + n-2 + ..... 3 + 2 + 1)
            = _k*_n*(n-1)_
@@ -41,7 +60,7 @@
     Time Complexity = O(n^2)
 
 
-    -------------------------------------------------------------------
+    ----------------------------------------------------------------------------------------------------
     // binary search
              _________________
     Array:  |_|_|_|_|_|_|_|_|_|   size = n
@@ -76,5 +95,15 @@
            = O(logn)
            
     Time Complexity = O(logn)
-                 
+
+
+    ----------------------------------------------------------------------------------------------------
+    Reference    - [Recurrence Relation (T(n)= T(n-1) + 1) #1] https://www.youtube.com/watch?v=4V30R3I1vLI
+    (Abdul Bari)   [Recurrence Relation (T(n)= T(n-1) + n) #2] https://www.youtube.com/watch?v=IawM82BQ4II
+                   [Recurrence Relation [ T(n)= 2T(n/2) +n] #3] https://www.youtube.com/watch?v=1K9ebQJosvo
+                   [Recurrence Relation T(n)=2 T(n-1)+1 #4] https://www.youtube.com/watch?v=JvcqtZk2mng
+
+                   [Recurrence Relation Dividing Function T(n)=T(n/2)+1 #1] https://www.youtube.com/watch?v=8gt0D0IqU5w
+                   [Recurrence Relation Dividing [ T(n)=T(n/2)+ n]. #2] https://www.youtube.com/watch?v=XcZw01FuH18
+                   [Recurrence Relation [ T(n)= 2T(n/2) +n] #3] https://www.youtube.com/watch?v=1K9ebQJosvo
 */
