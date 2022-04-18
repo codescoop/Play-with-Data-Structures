@@ -1,39 +1,31 @@
 /*
-    TOPIC: Mid Point of Linked List 
-           (Runner Technique)
+    TOPIC: Kth Node from the end of Linked List 
 
-    - Approach-I: Calculate length of linked list & then Iterate till "length/2".
-                  So, time = l + l/2
+    - Approach-I: Calculate length of linked list & then Iterate till "length - k" from the beginning.
+                  (i.e we need 2 traversal l & l-k)
+                  So, time = l + l-k
                   Complexity O(N)
 
     - Approach-II: With Runner Technique we can calculte mid point in single pass (i.e single iteration)
-                   We will keep 2 pointers, 
+                   We will keep 2 pointers
                    - Slow pointer [It will move by 1 step] 
-                   - Fast pointer [It will move by 2 steps]
+                   - Fast pointer [first move k steps & thereafter move by 1 step]
+                   We will be taking fast pointer k-steps ahead & then both fast & slow will move by 1 step
 
-                    Fast 2x  --------------------------------> |>
-                    Slow 1x  ---------------->                 |
-                             __________________________________|
-                          Start              Mid              End
                   
-                  Eg: - For Odd number of nodes
-                         F             F             F                 // F: Fast pointer (Speed 2x)
-                         1  ->  2  ->  3  ->  4  ->  5
-                         S      S      S                               // S: Slow Pointer (Speed 1x)
-                                      [mid]
+                  Eg: - When k=2
 
-                      - For Even number of nodes
-                        Method 1:
-                                  F             F              F
-                                  1  ->  2  ->  3  ->  4  ->  NULL
-                                  S      S      S
-                                              [mid]
+                      Position   :   0        1       2        3         4
+                                                     k=2
 
-                        Method 2: [Start "Fast pointer" 1 position ahead of "Slow pointer"]
-                                         F             F
-                                  1  ->  2  ->  3  ->  4
-                                  S      S
-                                       [mid]
+                                     |-------k--------||------l-k--------|
+
+                                                     F        F        F             // F: Fast pointer
+                      Linked List:  151  ->  152  ->  153  ->  154  ->  155
+                                     S        S        S                             // S: Slow Pointer
+
+                                     |-----l-k---------||-------k--------|
+
 */
 
 
@@ -426,6 +418,36 @@ Node* midpoint(Node *head)
 }
 
 
+// Finding the kth node from the end of linked list
+Node* kthNode(Node *head, int k)
+{
+    // linked list with 0 node
+    if(head == NULL)
+    {
+        return head;
+    }
+
+    Node *fast = head;
+    Node *slow = head;
+
+    while(fast->next != NULL)
+    {
+        // moving fast-pointer k steps
+        if(k-1)
+        {
+            fast = fast->next;
+            k--;
+        }
+        // moving both pointer by 1 steps
+        else
+        {
+            fast = fast->next;
+            slow = slow->next;
+        }
+    }
+    return slow;
+}
+
 
 int main()
 {
@@ -438,10 +460,14 @@ int main()
     // print(head);
     cout << head;
 
-    Node *mid = midpoint(head);      // finding the mid point
+    int k;
+    cout << "Enter [kth position]: ";
+    cin >> k;
 
-    cout << "Linked List [Midpoint]: ";
-    cout << mid->data << endl;
+    Node *kthPos = kthNode(head,k);      // finding the mid point
+
+    cout << "Linked List [Node value at position " << k << " from end]: ";
+    cout << kthPos->data << endl;
 
     return 0;
 }
@@ -450,13 +476,16 @@ int main()
 /* 
 OUTPUT:
 
-Case 1 [For Odd number of nodes in linked list]
-    Enter Elements [Press -1 to Exit] : 1 2 3 4 5 -1
-    Linked List                       : 5 -> 4 -> 3 -> 2 -> 1
-    Linked List [Midpoint]            : 3
+Case 1
+    Enter Elements [Press -1 to Exit]               : 11 12 13 14 15 16 -1
+    Linked List                                     : 16 -> 15 -> 14 -> 13 -> 12 -> 11
+    Enter [kth position]                            : 4
+    Linked List [Node value at position 4 from end] : 14
 
-Case 2 [For Even number of nodes in linked list]
-    Enter Elements [Press -1 to Exit] : 1 2 3 4 -1
-    Linked List                       : 4 -> 3 -> 2 -> 1
-    Linked List [Midpoint]            : 3
+Case 2
+    Enter Elements [Press -1 to Exit]               : 11 12 13 14 15 16 -1
+    Linked List                                     : 16 -> 15 -> 14 -> 13 -> 12 -> 11
+    Enter [kth position]                            : 2
+    Linked List [Node value at position 4 from end] : 12
+
 */

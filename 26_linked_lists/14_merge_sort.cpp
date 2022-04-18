@@ -1,40 +1,10 @@
 /*
-    TOPIC: Mid Point of Linked List 
-           (Runner Technique)
+    TOPIC: Merge Sort
+    
+    - Sort an unsorted Linked Lists
 
-    - Approach-I: Calculate length of linked list & then Iterate till "length/2".
-                  So, time = l + l/2
-                  Complexity O(N)
-
-    - Approach-II: With Runner Technique we can calculte mid point in single pass (i.e single iteration)
-                   We will keep 2 pointers, 
-                   - Slow pointer [It will move by 1 step] 
-                   - Fast pointer [It will move by 2 steps]
-
-                    Fast 2x  --------------------------------> |>
-                    Slow 1x  ---------------->                 |
-                             __________________________________|
-                          Start              Mid              End
-                  
-                  Eg: - For Odd number of nodes
-                         F             F             F                 // F: Fast pointer (Speed 2x)
-                         1  ->  2  ->  3  ->  4  ->  5
-                         S      S      S                               // S: Slow Pointer (Speed 1x)
-                                      [mid]
-
-                      - For Even number of nodes
-                        Method 1:
-                                  F             F              F
-                                  1  ->  2  ->  3  ->  4  ->  NULL
-                                  S      S      S
-                                              [mid]
-
-                        Method 2: [Start "Fast pointer" 1 position ahead of "Slow pointer"]
-                                         F             F
-                                  1  ->  2  ->  3  ->  4
-                                  S      S
-                                       [mid]
 */
+
 
 
 #include <iostream>
@@ -426,6 +396,139 @@ Node* midpoint(Node *head)
 }
 
 
+// Finding the kth node from the end of linked list
+Node* kthNode(Node *head, int k)
+{
+    if(head == NULL)
+    {
+        return head;
+    }
+
+    Node *fast = head;
+    Node *slow = head;
+
+    while(fast->next != NULL)
+    {
+        // moving  k steps
+        if(k-1)
+        {
+            fast = fast->next;
+            k--;
+        }
+        else
+        {
+            // moving 1 steps
+            fast = fast->next;
+            slow = slow->next;
+        }
+    }
+    return slow;
+}
+
+
+// funtion to merge two linked lists
+Node* merge(Node* a, Node* b)
+{
+    // base case
+    if(a == NULL)
+    {
+        return b;
+    }
+    if(b == NULL)
+    {
+        return a;
+    }
+    // rec case
+    Node *c;       // take a new head pointer
+
+    if(a->data < b->data)
+    {
+        c = a;
+        c->next = merge(a->next, b);     // return, merge of "pending a" with "b"
+    } 
+    else{
+        c = b;
+        c->next = merge(a, b->next);     // return, merge of "a" with "pending b"
+    }
+    return c;     // return the head pointer
+    
+    /*
+        Eg: a :   1  ->  2  ->  4  ->  8  ->  9 ->  NULL
+            b :   0  ->  5  ->  7  -> NULL
+
+            Now, merge(a,b)
+            
+                c : 0  ->
+                          | 1  ->  2  ->  4  ->  8  ->  9  ->  NULL       // a
+                          | 5  ->  7  ->  NULL                            // pending of b
+
+                c : 0 -> 1 -> 
+                              | 2  ->  4  ->  8  ->  9  ->  NULL          // pending of a
+                              | 5  ->  7  ->  NULL                        // b
+                  
+                c : 0 -> 1 -> 2 ->
+                                   | 4  ->  8  ->  9  ->  NULL            // pending of a
+                                   | 5  ->  7  ->  NULL                   // b
+                
+                c : 0 -> 1 -> 2 -> 4 ->
+                                        | 8  ->  9  ->  NULL              // pending of a
+                                        | 5  ->  7  ->  NULL              // b
+                
+                c : 0 -> 1 -> 2 -> 4 -> 5 ->
+                                             | 8  ->  9  ->  NULL         // a
+                                             | 7  ->  NULL                // pending of b
+                
+                c : 0 -> 1 -> 2 -> 4 -> 5 -> 7 -> 
+                                                  | 8 -> 9 -> NULL        // a
+                                                  | NULL                  // pending of b
+
+
+                c : 0 -> 1 -> 2 -> 4 -> 5 -> 7 -> 8 -> 9 -> NULL
+
+    */
+}
+
+// merge sort in linked list  [Time Complexity: NLogN (same as in array)]
+Node* mergeSort(Node* head)
+{
+    // base case: For 0 or 1 Node in linked list
+    if(head == NULL or head->next == NULL)
+    {
+        return head;
+    }
+    // res case:
+    // 1. divide/break
+    Node *mid = midpoint(head);   // Time Complexity: O(N)   (Note: array takes O(1) to find midpoint)
+    Node *a = head;               // "a" points at beginning of Linked list
+    Node *b = mid->next;          // "b" points next to "mid node" of Linked list (till end)
+    mid->next = NULL;             // to make "a" points till "mid" (i.e to remove linked nodes after "mid")
+
+    // 2. Recursive sort the two parts
+    a = mergeSort(a);
+    b = mergeSort(b);
+
+    // 3. merge
+    Node* newhead = merge(a,b);
+
+    return newhead;
+    
+    /* 
+        Eg:     a(head)   b(mid->next)
+                |         |
+            =>  1 -> 0 -> 3 ->  4
+                     |
+                    mid
+
+            =>  After, mid->next = NULL;
+
+            =>  1 -> 0      3 -> 4
+                |           |
+                a           b
+
+    */
+ 
+}
+
 
 int main()
 {
@@ -438,10 +541,10 @@ int main()
     // print(head);
     cout << head;
 
-    Node *mid = midpoint(head);      // finding the mid point
+    head = mergeSort(head);            // sort linked list
 
-    cout << "Linked List [Midpoint]: ";
-    cout << mid->data << endl;
+    cout << "Linked List [Sorted]: ";
+    cout << head;
 
     return 0;
 }
@@ -450,13 +553,8 @@ int main()
 /* 
 OUTPUT:
 
-Case 1 [For Odd number of nodes in linked list]
-    Enter Elements [Press -1 to Exit] : 1 2 3 4 5 -1
-    Linked List                       : 5 -> 4 -> 3 -> 2 -> 1
-    Linked List [Midpoint]            : 3
+    Enter Elements [Press -1 to Exit] : 14 3 10 5 1 6 -1
+    Linked List                       : 6 -> 1 -> 5 -> 10 -> 3 -> 14
+    Linked List [Sorted]              : 1 -> 3 -> 5 -> 6 -> 10 -> 14 
 
-Case 2 [For Even number of nodes in linked list]
-    Enter Elements [Press -1 to Exit] : 1 2 3 4 -1
-    Linked List                       : 4 -> 3 -> 2 -> 1
-    Linked List [Midpoint]            : 3
 */

@@ -1,40 +1,8 @@
 /*
-    TOPIC: Mid Point of Linked List 
-           (Runner Technique)
+    TOPIC: Merge two sorted Linked Lists
 
-    - Approach-I: Calculate length of linked list & then Iterate till "length/2".
-                  So, time = l + l/2
-                  Complexity O(N)
-
-    - Approach-II: With Runner Technique we can calculte mid point in single pass (i.e single iteration)
-                   We will keep 2 pointers, 
-                   - Slow pointer [It will move by 1 step] 
-                   - Fast pointer [It will move by 2 steps]
-
-                    Fast 2x  --------------------------------> |>
-                    Slow 1x  ---------------->                 |
-                             __________________________________|
-                          Start              Mid              End
-                  
-                  Eg: - For Odd number of nodes
-                         F             F             F                 // F: Fast pointer (Speed 2x)
-                         1  ->  2  ->  3  ->  4  ->  5
-                         S      S      S                               // S: Slow Pointer (Speed 1x)
-                                      [mid]
-
-                      - For Even number of nodes
-                        Method 1:
-                                  F             F              F
-                                  1  ->  2  ->  3  ->  4  ->  NULL
-                                  S      S      S
-                                              [mid]
-
-                        Method 2: [Start "Fast pointer" 1 position ahead of "Slow pointer"]
-                                         F             F
-                                  1  ->  2  ->  3  ->  4
-                                  S      S
-                                       [mid]
 */
+
 
 
 #include <iostream>
@@ -426,22 +394,117 @@ Node* midpoint(Node *head)
 }
 
 
+// Finding the kth node from the end of linked list
+Node* kthNode(Node *head, int k)
+{
+    if(head == NULL)
+    {
+        return head;
+    }
+
+    Node *fast = head;
+    Node *slow = head;
+
+    while(fast->next != NULL)
+    {
+        // moving  k steps
+        if(k-1)
+        {
+            fast = fast->next;
+            k--;
+        }
+        else
+        {
+            // moving 1 steps
+            fast = fast->next;
+            slow = slow->next;
+        }
+    }
+    return slow;
+}
+
+
+// funtion to merge two linked lists
+Node* merge(Node* a, Node* b)
+{
+    // base case
+    if(a == NULL)
+    {
+        return b;
+    }
+    if(b == NULL)
+    {
+        return a;
+    }
+    // rec case
+    Node *c;       // take a new head pointer
+
+    if(a->data < b->data)
+    {
+        c = a;
+        c->next = merge(a->next, b);     // return, merge of "pending a" with "b"
+    } 
+    else{
+        c = b;
+        c->next = merge(a, b->next);     // return, merge of "a" with "pending b"
+    }
+    return c;     // return the head pointer
+    
+    /*
+        Eg: a :   1  ->  2  ->  4  ->  8  ->  9 ->  NULL
+            b :   0  ->  5  ->  7  -> NULL
+
+            Now, merge(a,b)
+            
+                c : 0  ->
+                          | 1  ->  2  ->  4  ->  8  ->  9  ->  NULL       // a
+                          | 5  ->  7  ->  NULL                            // pending of b
+
+                c : 0 -> 1 -> 
+                              | 2  ->  4  ->  8  ->  9  ->  NULL          // pending of a
+                              | 5  ->  7  ->  NULL                        // b
+                  
+                c : 0 -> 1 -> 2 ->
+                                   | 4  ->  8  ->  9  ->  NULL            // pending of a
+                                   | 5  ->  7  ->  NULL                   // b
+                
+                c : 0 -> 1 -> 2 -> 4 ->
+                                        | 8  ->  9  ->  NULL              // pending of a
+                                        | 5  ->  7  ->  NULL              // b
+                
+                c : 0 -> 1 -> 2 -> 4 -> 5 ->
+                                             | 8  ->  9  ->  NULL         // a
+                                             | 7  ->  NULL                // pending of b
+                
+                c : 0 -> 1 -> 2 -> 4 -> 5 -> 7 -> 
+                                                  | 8 -> 9 -> NULL        // a
+                                                  | NULL                  // pending of b
+
+
+                c : 0 -> 1 -> 2 -> 4 -> 5 -> 7 -> 8 -> 9 -> NULL
+
+    */
+}
+
 
 int main()
 {
-    Node *head = NULL;
+    Node *head1 = NULL;
+    Node *head2 = NULL;
 
-    cout << "Enter Elements [Press -1 to Exit]: ";
-    cin >> head;
+    cout << "Enter Linked List 1 [Press -1 to Exit]: ";
+    cin >> head1;
+    cout << "Enter Linked List 2 [Press -1 to Exit]: ";
+    cin >> head2;
 
-    cout << "Linked List: ";
+    cout << "Linked List: \n";
     // print(head);
-    cout << head;
+    cout << head1 << head2;
 
-    Node *mid = midpoint(head);      // finding the mid point
+    Node *newHead = merge(head1, head2);      // merge 2 linked lists
 
-    cout << "Linked List [Midpoint]: ";
-    cout << mid->data << endl;
+    cout << "Linked List [after merge]: ";
+    cout << newHead;
 
     return 0;
 }
@@ -450,13 +513,18 @@ int main()
 /* 
 OUTPUT:
 
-Case 1 [For Odd number of nodes in linked list]
-    Enter Elements [Press -1 to Exit] : 1 2 3 4 5 -1
-    Linked List                       : 5 -> 4 -> 3 -> 2 -> 1
-    Linked List [Midpoint]            : 3
+Case 1:
+    Enter Linked List 1 [Press -1 to Exit] : 9 8 4 2 1 -1
+    Enter Linked List 2 [Press -1 to Exit] : 7 5 0 -1
+    Linked List                            : 1 -> 2 -> 4 -> 8 -> 9
+                                             0 -> 5 -> 7
+    Linked List [after merge]              : 0 -> 1 -> 2 -> 4 -> 5 -> 7 -> 8 -> 9
 
-Case 2 [For Even number of nodes in linked list]
-    Enter Elements [Press -1 to Exit] : 1 2 3 4 -1
-    Linked List                       : 4 -> 3 -> 2 -> 1
-    Linked List [Midpoint]            : 3
+Case 2:
+    Enter Linked List 1 [Press -1 to Exit] : 8 6 4 2 1 -1
+    Enter Linked List 2 [Press -1 to Exit] : 10 5 0 -1
+    Linked List                            : 1 -> 2 -> 4 -> 6 -> 8
+                                             0 -> 5 -> 10
+    Linked List [after merge]              : 0 -> 1 -> 2 -> 4 -> 5 -> 6 -> 8 -> 10
+
 */
