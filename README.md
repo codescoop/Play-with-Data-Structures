@@ -868,10 +868,6 @@ Welcome to the exercises. This is where the magic happens!
 ### [20. Recursion-V Backtracking](20_recursion_V_backtracking)
 ### [21. More Sorting Techniques & Problems](21_more_Sorting_techniques_n_problems)
 ### [22. Space Time Complexity Analysis](22_space_time_complexity_analysis)
-### [23. Object Oriented Programming Concepts](23_object_oriented_programming_concepts)
-### [24. Generic Programming in CPP](24_generic_programming_in_cpp)
-### [25. Vectors](25_vectors)
-### [26. Linked Lists](26_linked_lists)
 <!-- Challenges - Space Time Complexity Analysis ---------------------->
 <blockquote>
   <details>
@@ -896,6 +892,10 @@ Welcome to the exercises. This is where the magic happens!
   </details>
  </blockquote>
 
+### [23. Object Oriented Programming Concepts](23_object_oriented_programming_concepts)
+### [24. Generic Programming in CPP](24_generic_programming_in_cpp)
+### [25. Vectors](25_vectors)
+### [26. Linked Lists](26_linked_lists)
 
 ### [^^ Miscellaneous](misc)
 <!-- Challenges - Misc ---------------------->
