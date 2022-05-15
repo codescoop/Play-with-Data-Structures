@@ -94,6 +94,35 @@ OUTPUT:
 
 More Info:
 
+   > Computer only understands the low-level language, i.e., binary form. 
+     The program we write in C++ is always in high-level language, so to convert the program into binary form,
+     we use compiler. 
+   > Compiler is a program that converts source code into an executable file. 
+   > This executable file gets stored in RAM. 
+   > The CPU starts the execution from the main() method, and it reads the copy in RAM but not the original file. 
+   > All the functions and machine code instructions are data. This data is a bunch of bytes, and all
+     these bytes have some address in RAM.
+
+
+      Source Code                                     Machine Code             System Memory  
+     ________________                                ________________         _______________ 
+    |                |                              |                |       |               |
+    | ...            |      __________________      |   10010011     |       |     Heap      |
+    | ...            |     |                  |     |   11011001     |       |_______________|
+    | int main()     |     |                  |     |   11100001     |       |               |
+    | {              | --> |    Compiler      | --> |   10111001     | ----> |     Stack     |
+    |  Cout<<"Hi";   |     |                  |     |   11011011     |       |_______________|
+    |  return 0;     |     |                  |     |   11100001     |       |               |
+    | }              |     |__________________|     |   10001111     |       | Static/Global |
+    |                |                              |   11100001     |       |_______________|
+    |                |                              |                |       |               |
+    |                |                              |                |       |   Code(Text)  |
+    |________________|                              |________________|       |_______________|
+
+    Reference: https://www.javatpoint.com/function-pointer-in-cpp
+
+    
+
 - Stack, Static, and Heap in C++ (the short answer):
 
     > stack variable
@@ -193,5 +222,41 @@ More Info:
       what is going on, when, under the covers) then I'd stick with C++. There is a reason that every 
       major game engine that I've ever heard of is in C++ (if not C or assembly). Python, et al are fine 
       for scripting, but not the main game engine.
+
+
+-  C++ Storage Classes
+    > Storage class is used to define the lifetime and visibility of a variable and/or function within a C++ program.
+    > Lifetime refers to the period during which the variable remains active and visibility refers to the
+      module of a program in which the variable is accessible.
+
+    > There are five types of storage classes, which can be used in a C++ program:- 
+       -----------------------------------------------------------------------------
+      |  Storage Class |  keyword   |   Lifetime       | Visibility | Initial Value |
+      |-----------------------------------------------------------------------------|
+      |  1. Automatic  |  auto      |  Function Block  | Local      |  Garbage      |
+      |  2. Register   |  register  |  Function Block  | Local      |  Garbage      |
+      |  3. Mutable    |  mutable   |  Class           | Local      |  Garbage      |
+      |  4. External   |  extern    |  Whole Program   | Global     |  Zero         |
+      |  5. Static     |  static    |  Whole Program   | Local      |  Zero         |
+       -----------------------------------------------------------------------------
+    
+    Reference -  https://www.javatpoint.com/cpp-storage-classes
+
+
+- C++ static
+   > In C++, static is a keyword or modifier that belongs to the type not instance. 
+     So instance is not required to access the static members. 
+     In C++, static can be field, method, constructor, class, properties, operator and event.
+   
+   > Advantage of C++ static keyword
+     - Memory efficient: Now we don't need to create instance for accessing the static members, so it saves memory. 
+                         Moreover, it belongs to the type, so it will not get memory each time when instance is created.
+
+   > C++ Static Field
+     - A field which is declared as static is called static field. 
+     - Unlike instance field which gets memory each time whenever you create object, there is only
+       one copy of static field created in the memory. It is shared to all the objects.
+  
+   Reference: https://www.javatpoint.com/cpp-static
 
 */
