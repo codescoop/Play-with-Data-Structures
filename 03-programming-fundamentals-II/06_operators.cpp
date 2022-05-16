@@ -89,7 +89,8 @@
                               endl      Line feed operator
                               setw      Field width operator
                               (type)    C-style type-casting
-                              a(...)
+                              a(...)    "three dots" syntax (...) inside the catch block, 
+                                         which will handle any type of exception.
 */
 
 #include <iostream>
