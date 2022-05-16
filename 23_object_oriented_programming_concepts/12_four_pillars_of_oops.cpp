@@ -1,5 +1,6 @@
 /* 
     Topics: Four Pillars of OOPs
+   ----------------------------------------------------------------------------------
 
    Abouts OOPs:
     - Object-Oriented Programming is a methodology or paradigm to design a program using classes and objects. 
@@ -22,69 +23,79 @@
 
     Reference: https://www.javatpoint.com/cpp-oops-concepts
 
+    - Advantage Of OOP
+       - Reusability
+       - Easy to understand
+       - Models the real world well
+       - Software complexity can be easily managed
+       - The principle of data hiding helps the programmer to build secure programs
+
+    - Disadvantage Of OOP
+       - Classes tends to be overly generated
+       - OOP program design is tricky
+       - Proper planning required
+       - Programmer should be well skilled
+
    ----------------------------------------------------------------------------------
 
    Four Pillars of OOPs:
-    1. Abstraction       [Eg: Abstract Classes, Interface & using Access Specifiers - Public, Private, Protected]
+    1. Abstraction       [Eg: Abstract Classes, Interface (using Virtual Function) & using Access Specifiers - Public, Private, Protected]
     2. Encapsulation     [Eg: Accessing Private members using Getter & Setter]
     3. Inheritance       [Derived class, Base class, Single, Multilevel, Hierarchical, Hybrid & Multiple Inheritance]
-    4. Polymorphism      [Overloading, Overriding, virtual function]
+    4. Polymorphism      [Overloading (Complie time polymorphism), Overriding (Run time polymorphism)]
+
+   ----------------------------------------------------------------------------------
 
 
-  Abstraction:
-    - Hiding internal details and showing functionality is known as abstraction. 
-      For example: phone call, we don't know the internal processing.
-    - In C++, we use abstract class and interface to achieve abstraction.
-      
-    > Interfaces in C++ (Abstract Classes)
-      - Abstract class and interface both can have abstract methods which are necessary for abstraction.
-      - C++ Abstract class: In C++ class is made abstract by declaring at least one of its functions as pure "virtual function". 
-                            A pure virtual function is specified by placing "= 0" in its declaration & Its implementation must 
-                            be provided by derived classes.
-                            
-      Reference: https://www.javatpoint.com/interfaces-in-cpp
+  Inheritance:
+    - When one object acquires all the properties and behaviours of parent object i.e. known as inheritance.
+      It provides code reusability. It is used to achieve runtime polymorphism.
+    - It is useful for code reusability: reuse attributes and methods of an existing class when you 
+      create a new class.
 
-    > Data Abstraction in C++
-      - C++ provides a great level of abstraction. 
-        For example, pow() function is used to calculate the power of a number without knowing the
-                     algorithm the function follows.
+    - To inherit from a class, use the : symbol.
 
-      - In C++ program if we implement class with private and public members then it is an example 
-        of data abstraction. 
-      
-      - Data Abstraction can be achieved in two ways:
-        1. Abstraction using classes
-        2. Abstraction in header files. 
+    - We group the "inheritance concept" into two categories:
+       > Derived Class (child)  - the class that inherits from another class
+       > Base Class (parent)    - the class being inherited from
 
-    - Abstraction using Classes:
-      - An abstraction can be achieved using classes. 
-      - A class is used to group all the data members and member functions into a single unit by using the
-        access specifiers. 
-      - A class has the responsibility to determine which data member is to be visible outside and 
-        which is not.
+    - Types of Inheritance:
+       > Single Inheritance:
+       > Multilevel Inheritance: A class can also be derived from one class, which is already derived from another class.
+       > Hierarchical Inheritance:
+       > Hybrid Inheritance:
+       > Multiple Inheritance: A class can also be derived from more than one base class, using a comma-separated list:
 
-    - Abstraction in Header files:
-      - An another type of abstraction is header file. 
-      - For example, pow() function available is used to calculate the power of a number without actually 
-        knowing which algorithm function uses to calculate the power. 
-      - Thus, we can say that header files hides all the implementation details from the user.
+    Reference:  https://www.w3schools.com/CPP/cpp_inheritance.asp
 
-    - Abstraction using access specifiers:
-      - Access specifiers are the main pillar of implementing abstraction in C++. 
-      - Access Specifiers Implement Abstraction.
-      - We can use access specifiers to enforce restrictions on class members. 
-      - For example:
-        - Members declared as public in a class, can be accessed from anywhere in the program.
-        - Members declared as private in a class, can be accessed only from within the class. 
-          They are not allowed to be accessed from any part of code outside the class.
 
-      - We can easily implement abstraction using the above two features provided by access specifiers.
+   ----------------------------------------------------------------------------------
+
+  Polymorphism:
+    - When one task is performed by different ways i.e. known as polymorphism.
+    - For example, think of a base class called Animal that has a method called animalSound(). 
+                   Derived classes of Animals could be Pigs, Cats, Dogs, Birds - And they also have 
+                   their own implementation of an animal sound (the pig oinks, and the cat meows,etc)
+      Reference:  https://www.w3schools.com/CPP/cpp_polymorphism.asp
     
-      Reference:  https://www.javatpoint.com/data-abstraction-in-cpp
+    - Function Overloading (Compile Time Polymorphism)
+      - If we create two or more members having the same name but different in number or type of parameter, 
+        it is known as C++ overloading. 
+      - In C++, we can overload:
+        - methods,
+        - constructors, and
+        - indexed properties
+        (It is because these members have parameters only.)
+        Reference:  https://www.javatpoint.com/cpp-overloading
 
-      Reference:  https://www.geeksforgeeks.org/abstraction-in-c/
+    - Function Overriding (Run Time Polymorphism)
+       - If derived class defines same function as defined in its base class, it is known as function overriding. 
+       - It is used to achieve runtime polymorphism. It enables you to provide specific implementation of the 
+         function which is already provided by its base class.
+       Eg: create Pig and Dog objects and override the animalSound() method of Animal class.
+       Reference:  https://www.javatpoint.com/cpp-function-overriding
 
-
+   ----------------------------------------------------------------------------------
 
   Encapsulation:
     - Binding (or wrapping) code and data together into a single unit is known as encapsulation. 
@@ -97,56 +108,58 @@
 
      Reference:  https://www.w3schools.com/CPP/cpp_encapsulation.asp
 
+   ----------------------------------------------------------------------------------
+  Abstraction:
+    + Hiding internal details and showing functionality is known as abstraction. 
+      For example: phone call, we don't know the internal processing.
 
-  Inheritance:
-    - When one object acquires all the properties and behaviours of parent object i.e. known as inheritance.
-      It provides code reusability. It is used to achieve runtime polymorphism.
-    - It is useful for code reusability: reuse attributes and methods of an existing class when you 
-      create a new class.
+    + C++ provides a great level of abstraction.
+      For example, 
+       - pow() function is used to calculate the power of a number without knowing the algorithm the function follows.
+       - In C++ program if we implement class with private and public members then it is an example of data abstraction. 
 
-    - In C++, it is possible to inherit attributes and methods from one class to another. 
-    - We group the "inheritance concept" into two categories:
+    - Data Abstraction can be achieved in two ways:
+      1. Abstraction in header files. 
+      2. Abstraction using classes  (using Access specifiers: Public, Private, Protected)
+      3. Abstraction using using abstract class & interface (virtual function)
 
-       - Derived Class (child) - the class that inherits from another class
-       - Base Class (parent) - the class being inherited from
+    > Abstraction in Header files:
+      - An another type of abstraction is header file. 
+      - For example, pow() function available is used to calculate the power of a number without actually 
+        knowing which algorithm function uses to calculate the power. 
+      - Thus, we can say that header files hides all the implementation details from the user.
 
-    - To inherit from a class, use the : symbol.
+    > Abstraction using Classes:
+      - An abstraction can be achieved using classes. 
+      - A class is used to group all the data members and member functions into a single unit by using the
+        access specifiers. 
+      - A class has the responsibility to determine which data member is to be visible outside and 
+        which is not.
 
-    > Single Inheritance:
-    > Multilevel Inheritance: A class can also be derived from one class, which is already derived from another class.
-    > Hierarchical Inheritance:
-    > Hybrid Inheritance:
-    > Multiple Inheritance: A class can also be derived from more than one base class, using a comma-separated list:
-
-    Reference:  https://www.w3schools.com/CPP/cpp_inheritance.asp
-
-
-
-  Polymorphism:
-    - When one task is performed by different ways i.e. known as polymorphism.
-    - For example, think of a base class called Animal that has a method called animalSound(). 
-                   Derived classes of Animals could be Pigs, Cats, Dogs, Birds - And they also have 
-                   their own implementation of an animal sound (the pig oinks, and the cat meows,etc)
-      Reference:  https://www.w3schools.com/CPP/cpp_polymorphism.asp
+    > Abstraction using access specifiers:
+      - Access specifiers are the main pillar of implementing abstraction in C++. 
+      - Access Specifiers Implement Abstraction.
+      - We can use access specifiers to enforce restrictions on class members. 
+      - For example:
+        - Members declared as public in a class, can be accessed from anywhere in the program.
+        - Members declared as private in a class, can be accessed only from within the class. 
+          They are not allowed to be accessed from any part of code outside the class.
+      - We can easily implement abstraction using the above two features provided by access specifiers.
     
-    - Function Overloading
-      - If we create two or more members having the same name but different in number or type of parameter, 
-        it is known as C++ overloading. 
-      - In C++, we can overload:
-        - methods,
-        - constructors, and
-        - indexed properties
-        (It is because these members have parameters only.)
-        Reference:  https://www.javatpoint.com/cpp-overloading
+        Reference:  https://www.javatpoint.com/data-abstraction-in-cpp
+        Reference:  https://www.geeksforgeeks.org/abstraction-in-c/
 
-    - Function Overriding:
-       - If derived class defines same function as defined in its base class, it is known as function overriding. 
-       - It is used to achieve runtime polymorphism. It enables you to provide specific implementation of the 
-         function which is already provided by its base class.
-       Eg: create Pig and Dog objects and override the animalSound() method of Animal class.
-       Reference:  https://www.javatpoint.com/cpp-function-overriding
 
-    - C++ virtual function
+    > In C++, we use abstract class and interface to achieve abstraction.
+      + Interfaces in C++ (Abstract Classes)
+        - Abstract class and interface both can have abstract methods which are necessary for abstraction.
+        - C++ Abstract class: In C++ class is made abstract by declaring at least one of its functions as pure "virtual function". 
+                              A pure virtual function is specified by placing "= 0" in its declaration & Its implementation must 
+                              be provided by derived classes.
+                            
+           Reference: https://www.javatpoint.com/interfaces-in-cpp
+
+      + C++ virtual function
        - A C++ virtual function is a member function in the base class that you redefine in a derived class. 
          It is declared using the virtual keyword.
        - It is used to tell the compiler to perform dynamic linkage or late binding on the function.
@@ -171,4 +184,5 @@
 
        Reference:  https://www.javatpoint.com/cpp-virtual-function
 
+   ----------------------------------------------------------------------------------
 */
