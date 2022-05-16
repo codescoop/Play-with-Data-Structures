@@ -21,7 +21,7 @@ int main(){
     int *ptr = &a;             // declaration & initilization
 
     cout << "&a - " << &a << endl;                    // OUTPUT: (Address of bucket "a")
-    cout << "ptr - " << &a << "\n\n";                 // OUTPUT: (Address of bucket "a")
+    cout << "ptr - " << ptr << "\n\n";                // OUTPUT: (Address of bucket "a")
     
     // dereferencing
     cout << "*(&a) - " << *(&a) << endl;              // OUTPUT: 10 (value -> address a)
