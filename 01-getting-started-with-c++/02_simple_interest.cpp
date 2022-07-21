@@ -4,9 +4,9 @@
 
     What we will learn ? 
     - Type Casting -> Implicit
-      Eg:-  integer/interger = interger
-            float/interger = float
-            interger/float = float 
+      Eg:-  integer/integer = integer
+            float/integer = float
+            integer/float = float 
 
 */
 
