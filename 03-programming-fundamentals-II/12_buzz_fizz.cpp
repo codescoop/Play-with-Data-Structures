@@ -50,4 +50,5 @@ OUTPUT: 1, 2, Fizz, 4, Buzz, Fizz, 7, 8, Fizz, Buzz, 11, Fizz, 13, 14, FizzBuzz,
         76, 77, Fizz, 79, Buzz, Fizz, 82, 83, Fizz, Buzz, 86, Fizz, 88, 89, FizzBuzz,
         91, 92, Fizz, 94, Buzz, Fizz, 97, 98, Fizz, Buzz,
 
+Reference: [For Optimised Version] - https://www.enjoyalgorithms.com/blog/fizz-buzz-problem
 */
