@@ -1,0 +1,2 @@
+TUF: https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2
+Karan DSA: https://github.com/karandeepsingh7070/DSA-Concepts-Questions
