@@ -1,3 +1,5 @@
+// https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2  >> Step 3: Array
+
 // #1 Largest element
 // Brute: Sort >> arr[n-1] | O(NlogN)
 // Optimal | O(N)
